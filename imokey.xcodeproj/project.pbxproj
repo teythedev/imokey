@@ -7,23 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08094E1E295265D3008B93B7 /* SignInOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08094E1D295265D3008B93B7 /* SignInOptionsViewController.swift */; };
+		08094E20295269C0008B93B7 /* LoginPageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08094E1F295269C0008B93B7 /* LoginPageBuilder.swift */; };
+		08094E2329526EAB008B93B7 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08094E2229526EAB008B93B7 /* CustomButton.swift */; };
 		08B40A492950E7CB00CDD9CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B40A482950E7CB00CDD9CB /* AppDelegate.swift */; };
 		08B40A4B2950E7CB00CDD9CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B40A4A2950E7CB00CDD9CB /* SceneDelegate.swift */; };
 		08B40A4D2950E7CB00CDD9CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B40A4C2950E7CB00CDD9CB /* ViewController.swift */; };
-		08B40A502950E7CB00CDD9CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08B40A4E2950E7CB00CDD9CB /* Main.storyboard */; };
 		08B40A522950E7CC00CDD9CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08B40A512950E7CC00CDD9CB /* Assets.xcassets */; };
 		08B40A552950E7CC00CDD9CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08B40A532950E7CC00CDD9CB /* LaunchScreen.storyboard */; };
+		08B40A5F2950E8DD00CDD9CB /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B40A5E2950E8DD00CDD9CB /* LoginPageViewController.swift */; };
+		08B40A612951049600CDD9CB /* LoginPageContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B40A602951049600CDD9CB /* LoginPageContracts.swift */; };
+		08B40A63295104DB00CDD9CB /* LoginPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B40A62295104DB00CDD9CB /* LoginPageViewModel.swift */; };
+		08C7519B29565488001D82F5 /* SignInOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C7519A29565488001D82F5 /* SignInOptionsViewModel.swift */; };
+		08C7519E295654B1001D82F5 /* SignInOptionsContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C7519D295654B1001D82F5 /* SignInOptionsContracts.swift */; };
+		08C751A0295654CD001D82F5 /* SignInOptionsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C7519F295654CD001D82F5 /* SignInOptionsBuilder.swift */; };
+		08D5AFD529551BB200E9B489 /* SignInWithEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5AFD429551BB200E9B489 /* SignInWithEmailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08094E1D295265D3008B93B7 /* SignInOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInOptionsViewController.swift; sourceTree = "<group>"; };
+		08094E1F295269C0008B93B7 /* LoginPageBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageBuilder.swift; sourceTree = "<group>"; };
+		08094E2229526EAB008B93B7 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		08B40A452950E7CB00CDD9CB /* imokey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = imokey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08B40A482950E7CB00CDD9CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08B40A4A2950E7CB00CDD9CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		08B40A4C2950E7CB00CDD9CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		08B40A4F2950E7CB00CDD9CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		08B40A512950E7CC00CDD9CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08B40A542950E7CC00CDD9CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08B40A562950E7CC00CDD9CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08B40A5E2950E8DD00CDD9CB /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
+		08B40A602951049600CDD9CB /* LoginPageContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageContracts.swift; sourceTree = "<group>"; };
+		08B40A62295104DB00CDD9CB /* LoginPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewModel.swift; sourceTree = "<group>"; };
+		08C7519A29565488001D82F5 /* SignInOptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInOptionsViewModel.swift; sourceTree = "<group>"; };
+		08C7519D295654B1001D82F5 /* SignInOptionsContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInOptionsContracts.swift; sourceTree = "<group>"; };
+		08C7519F295654CD001D82F5 /* SignInOptionsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInOptionsBuilder.swift; sourceTree = "<group>"; };
+		08D5AFD429551BB200E9B489 /* SignInWithEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithEmailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +55,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08094E1C295265BE008B93B7 /* SignInOptions */ = {
+			isa = PBXGroup;
+			children = (
+				08C7519C29565491001D82F5 /* LoginWithEmail */,
+				08094E1D295265D3008B93B7 /* SignInOptionsViewController.swift */,
+				08C7519A29565488001D82F5 /* SignInOptionsViewModel.swift */,
+				08C7519D295654B1001D82F5 /* SignInOptionsContracts.swift */,
+				08C7519F295654CD001D82F5 /* SignInOptionsBuilder.swift */,
+			);
+			path = SignInOptions;
+			sourceTree = "<group>";
+		};
+		08094E2129526E8D008B93B7 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				08094E2229526EAB008B93B7 /* CustomButton.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
 		08B40A3C2950E7CB00CDD9CB = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +94,52 @@
 		08B40A472950E7CB00CDD9CB /* imokey */ = {
 			isa = PBXGroup;
 			children = (
+				08094E2129526E8D008B93B7 /* Component */,
+				08B40A5C2950E89900CDD9CB /* View */,
 				08B40A482950E7CB00CDD9CB /* AppDelegate.swift */,
 				08B40A4A2950E7CB00CDD9CB /* SceneDelegate.swift */,
 				08B40A4C2950E7CB00CDD9CB /* ViewController.swift */,
-				08B40A4E2950E7CB00CDD9CB /* Main.storyboard */,
 				08B40A512950E7CC00CDD9CB /* Assets.xcassets */,
 				08B40A532950E7CC00CDD9CB /* LaunchScreen.storyboard */,
 				08B40A562950E7CC00CDD9CB /* Info.plist */,
 			);
 			path = imokey;
+			sourceTree = "<group>";
+		};
+		08B40A5C2950E89900CDD9CB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				08B40A5D2950E8A800CDD9CB /* Login */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		08B40A5D2950E8A800CDD9CB /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				08C751A129566BBB001D82F5 /* RegisterOption */,
+				08094E1C295265BE008B93B7 /* SignInOptions */,
+				08B40A5E2950E8DD00CDD9CB /* LoginPageViewController.swift */,
+				08B40A602951049600CDD9CB /* LoginPageContracts.swift */,
+				08B40A62295104DB00CDD9CB /* LoginPageViewModel.swift */,
+				08094E1F295269C0008B93B7 /* LoginPageBuilder.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		08C7519C29565491001D82F5 /* LoginWithEmail */ = {
+			isa = PBXGroup;
+			children = (
+				08D5AFD429551BB200E9B489 /* SignInWithEmailViewController.swift */,
+			);
+			path = LoginWithEmail;
+			sourceTree = "<group>";
+		};
+		08C751A129566BBB001D82F5 /* RegisterOption */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RegisterOption;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +202,6 @@
 			files = (
 				08B40A552950E7CC00CDD9CB /* LaunchScreen.storyboard in Resources */,
 				08B40A522950E7CC00CDD9CB /* Assets.xcassets in Resources */,
-				08B40A502950E7CB00CDD9CB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +212,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08C7519E295654B1001D82F5 /* SignInOptionsContracts.swift in Sources */,
 				08B40A4D2950E7CB00CDD9CB /* ViewController.swift in Sources */,
+				08094E1E295265D3008B93B7 /* SignInOptionsViewController.swift in Sources */,
+				08094E2329526EAB008B93B7 /* CustomButton.swift in Sources */,
+				08B40A5F2950E8DD00CDD9CB /* LoginPageViewController.swift in Sources */,
 				08B40A492950E7CB00CDD9CB /* AppDelegate.swift in Sources */,
+				08C751A0295654CD001D82F5 /* SignInOptionsBuilder.swift in Sources */,
 				08B40A4B2950E7CB00CDD9CB /* SceneDelegate.swift in Sources */,
+				08C7519B29565488001D82F5 /* SignInOptionsViewModel.swift in Sources */,
+				08B40A612951049600CDD9CB /* LoginPageContracts.swift in Sources */,
+				08D5AFD529551BB200E9B489 /* SignInWithEmailViewController.swift in Sources */,
+				08094E20295269C0008B93B7 /* LoginPageBuilder.swift in Sources */,
+				08B40A63295104DB00CDD9CB /* LoginPageViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		08B40A4E2950E7CB00CDD9CB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				08B40A4F2950E7CB00CDD9CB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		08B40A532950E7CC00CDD9CB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +368,6 @@
 				INFOPLIST_FILE = imokey/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +395,6 @@
 				INFOPLIST_FILE = imokey/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
