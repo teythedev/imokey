@@ -24,8 +24,6 @@ class SignInOptionsViewController: UIViewController {
     var stackView: UIStackView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
     }
     
     override func loadView() {
@@ -100,7 +98,6 @@ extension SignInOptionsViewController {
     }
     
     @objc func selectionButtonTapped(sender: UIButton){
-        
         selected(option: SelectionOptions(rawValue: sender.tag))
 //        let optionsController = SignInWithEmailViewController()
 //        //        if let sheet = optionsController.presentationController as? UISheetPresentationController {
