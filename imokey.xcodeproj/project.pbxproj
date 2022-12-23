@@ -58,7 +58,7 @@
 		08094E1C295265BE008B93B7 /* SignInOptions */ = {
 			isa = PBXGroup;
 			children = (
-				08C7519C29565491001D82F5 /* LoginWithEmail */,
+				08C7519C29565491001D82F5 /* SignInWithEmail */,
 				08094E1D295265D3008B93B7 /* SignInOptionsViewController.swift */,
 				08C7519A29565488001D82F5 /* SignInOptionsViewModel.swift */,
 				08C7519D295654B1001D82F5 /* SignInOptionsContracts.swift */,
@@ -127,12 +127,12 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		08C7519C29565491001D82F5 /* LoginWithEmail */ = {
+		08C7519C29565491001D82F5 /* SignInWithEmail */ = {
 			isa = PBXGroup;
 			children = (
 				08D5AFD429551BB200E9B489 /* SignInWithEmailViewController.swift */,
 			);
-			path = LoginWithEmail;
+			path = SignInWithEmail;
 			sourceTree = "<group>";
 		};
 		08C751A129566BBB001D82F5 /* RegisterOption */ = {
