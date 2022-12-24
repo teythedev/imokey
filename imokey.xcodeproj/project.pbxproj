@@ -21,6 +21,7 @@
 		08C7519B29565488001D82F5 /* SignInOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C7519A29565488001D82F5 /* SignInOptionsViewModel.swift */; };
 		08C7519E295654B1001D82F5 /* SignInOptionsContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C7519D295654B1001D82F5 /* SignInOptionsContracts.swift */; };
 		08C751A0295654CD001D82F5 /* SignInOptionsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C7519F295654CD001D82F5 /* SignInOptionsBuilder.swift */; };
+		08C751A329567125001D82F5 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C751A229567125001D82F5 /* RegisterViewController.swift */; };
 		08D5AFD529551BB200E9B489 /* SignInWithEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5AFD429551BB200E9B489 /* SignInWithEmailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		08C7519A29565488001D82F5 /* SignInOptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInOptionsViewModel.swift; sourceTree = "<group>"; };
 		08C7519D295654B1001D82F5 /* SignInOptionsContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInOptionsContracts.swift; sourceTree = "<group>"; };
 		08C7519F295654CD001D82F5 /* SignInOptionsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInOptionsBuilder.swift; sourceTree = "<group>"; };
+		08C751A229567125001D82F5 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		08D5AFD429551BB200E9B489 /* SignInWithEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithEmailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +140,7 @@
 		08C751A129566BBB001D82F5 /* RegisterOption */ = {
 			isa = PBXGroup;
 			children = (
+				08C751A229567125001D82F5 /* RegisterViewController.swift */,
 			);
 			path = RegisterOption;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				08C751A0295654CD001D82F5 /* SignInOptionsBuilder.swift in Sources */,
 				08B40A4B2950E7CB00CDD9CB /* SceneDelegate.swift in Sources */,
 				08C7519B29565488001D82F5 /* SignInOptionsViewModel.swift in Sources */,
+				08C751A329567125001D82F5 /* RegisterViewController.swift in Sources */,
 				08B40A612951049600CDD9CB /* LoginPageContracts.swift in Sources */,
 				08D5AFD529551BB200E9B489 /* SignInWithEmailViewController.swift in Sources */,
 				08094E20295269C0008B93B7 /* LoginPageBuilder.swift in Sources */,

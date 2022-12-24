@@ -37,7 +37,7 @@ class CustomButton: UIButton {
         addSubview(imageLabel)
         addSubview(primaryLabel)
         clipsToBounds = true
-        layer.cornerRadius = 20
+        layer.cornerRadius = 30
         layer.borderWidth = 1
         layer.borderColor = UIColor.black.cgColor
         backgroundColor = .white

@@ -21,21 +21,6 @@ class LoginPageViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapAdd))
-    }
-    
-    @objc func didTapAdd() {
-        let picker = UIImagePickerController()
-        picker.sourceType = .photoLibrary
-        picker.delegate = self
-        
-        if let sheet = picker.presentationController as? UISheetPresentationController {
-            sheet.detents = [.medium(), .large()]
-            sheet.largestUndimmedDetentIdentifier = .medium
-            sheet.prefersGrabberVisible = true
-        }
-        present(picker, animated: true)
     }
     
     override func loadView() {
@@ -50,17 +35,6 @@ class LoginPageViewController: UIViewController {
     }
 }
 
-extension LoginPageViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        picker.dismiss(animated: true)
-    }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
-    }
-}
-
-
 extension LoginPageViewController: LoginPageViewModelDelagete {
     func showBottomSheet(with action: Actions) {
         switch action {
@@ -74,7 +48,7 @@ extension LoginPageViewController: LoginPageViewModelDelagete {
             }
             present(signInOptionsController, animated: true)
         case .registerAction:
-            let signInOptionsController = SignInOptionsBuilder.make()
+            let signInOptionsController = RegisterViewController()
             if let sheet = signInOptionsController.presentationController as? UISheetPresentationController {
                 sheet.detents = [.medium()]
                 sheet.largestUndimmedDetentIdentifier = .medium
