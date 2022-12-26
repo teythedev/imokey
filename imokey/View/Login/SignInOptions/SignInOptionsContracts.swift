@@ -22,4 +22,7 @@ enum SelectionOptions: Int {
 
 protocol SignInOptionsViewModelDelegate: AnyObject {
     func selected(option: SelectionOptions?)
+    
+    
+    func navigateToEmailSignIn()
 }

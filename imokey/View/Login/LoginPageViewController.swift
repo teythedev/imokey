@@ -25,7 +25,7 @@ class LoginPageViewController: UIViewController {
     
     override func loadView() {
         view = UIView()
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor(named: "bgColor")
         
         placeRegisterButton()
         placeSignInButton()
@@ -42,16 +42,16 @@ extension LoginPageViewController: LoginPageViewModelDelagete {
             let signInOptionsController = SignInOptionsBuilder.make()
             if let sheet = signInOptionsController.presentationController as? UISheetPresentationController {
                 sheet.detents = [.medium()]
-                sheet.largestUndimmedDetentIdentifier = .medium
+                //sheet.largestUndimmedDetentIdentifier = .medium
                 sheet.prefersGrabberVisible = true
                 
             }
             present(signInOptionsController, animated: true)
         case .registerAction:
-            let signInOptionsController = RegisterViewController()
+            let signInOptionsController = RegisterBuilder.make()
             if let sheet = signInOptionsController.presentationController as? UISheetPresentationController {
                 sheet.detents = [.medium()]
-                sheet.largestUndimmedDetentIdentifier = .medium
+                //sheet.largestUndimmedDetentIdentifier = .medium
                 sheet.prefersGrabberVisible = true
                 
             }
@@ -109,8 +109,9 @@ extension LoginPageViewController {
         signInButton.configuration?.buttonSize = .large
         signInButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         signInButton.setTitle("Sign In", for: .normal)
-        signInButton.setTitleColor(.black, for: .normal)
+        signInButton.setTitleColor(UIColor(named: "textColor"), for: .normal)
         signInButton.layer.borderWidth  = 2
+        signInButton.layer.borderColor = UIColor(named: "textColor")?.cgColor
         signInButton.translatesAutoresizingMaskIntoConstraints = false
         signInButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         view.addSubview(signInButton)

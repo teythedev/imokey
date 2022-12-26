@@ -21,6 +21,7 @@ final class SignInOptionsViewModel: SignInOptionsViewModelProtocol {
                 print("facebook")
             case .email:
                 print("email")
+                delegate?.navigateToEmailSignIn()
             }
     }
 }

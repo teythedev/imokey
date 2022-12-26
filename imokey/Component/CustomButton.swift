@@ -22,7 +22,7 @@ class CustomButton: UIButton {
         let label = UILabel()
         label.numberOfLines = 0
         label.textAlignment = .center
-        label.textColor = .black
+        label.textColor = .textColor
         label.font = .systemFont(ofSize: 20, weight: .semibold)
         return label
     }()
@@ -32,15 +32,16 @@ class CustomButton: UIButton {
         self.title = ""
         primaryLabel.text = self.title
         self.image = UIImage(systemName: "pencil")
-        imageLabel.image = self.image
+        imageLabel.image = self.image?.withRenderingMode(.alwaysTemplate)
+        imageLabel.tintColor = .textColor ?? .orange
         super.init(frame: frame)
         addSubview(imageLabel)
         addSubview(primaryLabel)
         clipsToBounds = true
         layer.cornerRadius = 30
         layer.borderWidth = 1
-        layer.borderColor = UIColor.black.cgColor
-        backgroundColor = .white
+        layer.borderColor = UIColor.textColor?.cgColor
+        backgroundColor = .bgColor
     }
     
     convenience init( title: String?, image: UIImage?) {

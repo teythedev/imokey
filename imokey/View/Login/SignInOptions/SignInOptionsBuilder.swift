@@ -5,12 +5,13 @@
 //  Created by Tugay on 24.12.2022.
 //
 
-import Foundation
+import UIKit
 
 final class SignInOptionsBuilder {
-    static func make() -> SignInOptionsViewController {
+    static func make() -> UINavigationController {
         let viewController = SignInOptionsViewController()
         viewController.viewModel = SignInOptionsViewModel()
-        return viewController
+        let navController = UINavigationController(rootViewController: viewController)
+        return navController
     }
 }

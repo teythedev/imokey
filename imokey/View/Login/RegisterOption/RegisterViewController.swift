@@ -16,6 +16,11 @@ class RegisterViewController: UIViewController {
     var passwordTextField: UITextField!
     var registerButton: UIButton!
     
+    var viewModel: RegisterViewModelProtocol! {
+        didSet {
+            viewModel.delegate = self
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,13 +28,28 @@ class RegisterViewController: UIViewController {
     
     override func loadView() {
         view = UIView()
-        view.backgroundColor = .white
+        view.backgroundColor = .bgColor
         placeStackView()
-        
-
         activateConstraints()
+    }
+}
+extension RegisterViewController: RegisterViewModelDelegate {
+    func handleViewModelOutput(_ output: RegisterViewModelOutput) {
+        switch output {
+        case .nilEmailOrPassword(let string):
+            let ac = UIAlertController(title: nil, message: string, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .cancel))
+            self.present(ac, animated: true)
+        }
+    }
+    
+    func navigateToAfterRegister() {
+        print("Change root view controller after registered successfully")
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(HomePageBuilder.make())
         
     }
+    
+    
 }
 
 extension RegisterViewController {
@@ -38,7 +58,6 @@ extension RegisterViewController {
             stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 60),
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -10),
-            stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -80),
         ])
     }
 }
@@ -58,7 +77,6 @@ extension RegisterViewController {
         placePasswordTextField()
         placeRegisterButton()
         
-        stackView.setCustomSpacing(40, after: passwordTextField)
     }
     
     func placeTitleTextLabel() {
@@ -78,6 +96,7 @@ extension RegisterViewController {
         emailTextField.layer.cornerRadius = 30
         emailTextField.layer.borderColor = UIColor.gray.cgColor
         emailTextField.layer.borderWidth = 1
+        emailTextField.keyboardType = .emailAddress
         emailTextField.heightAnchor.constraint(equalToConstant: 60).isActive = true
         stackView.addArrangedSubview(emailTextField)
     }
@@ -90,6 +109,7 @@ extension RegisterViewController {
         passwordTextField.layer.cornerRadius = 30
         passwordTextField.layer.borderColor = UIColor.gray.cgColor
         passwordTextField.layer.borderWidth = 1
+        passwordTextField.isSecureTextEntry = true
         passwordTextField.heightAnchor.constraint(equalToConstant: 60).isActive = true
         stackView.addArrangedSubview(passwordTextField)
     }
@@ -104,8 +124,13 @@ extension RegisterViewController {
         registerButton.setTitle("Register", for: .normal)
         registerButton.setTitleColor(.black, for: .normal)
         registerButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
-        //registerButton.translatesAutoresizingMaskIntoConstraints = false
-//        registerButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        registerButton.addTarget(self, action: #selector(registerButtonTapped), for: .touchUpInside)
         stackView.addArrangedSubview(registerButton)
+    }
+}
+
+extension RegisterViewController {
+    @objc func registerButtonTapped(sender: UIButton) {
+        viewModel.register(with: emailTextField.text, and: passwordTextField.text)
     }
 }

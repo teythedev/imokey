@@ -10,6 +10,17 @@
 		08094E1E295265D3008B93B7 /* SignInOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08094E1D295265D3008B93B7 /* SignInOptionsViewController.swift */; };
 		08094E20295269C0008B93B7 /* LoginPageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08094E1F295269C0008B93B7 /* LoginPageBuilder.swift */; };
 		08094E2329526EAB008B93B7 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08094E2229526EAB008B93B7 /* CustomButton.swift */; };
+		084869C1295A1C260006820C /* SignInWithEmailContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084869C0295A1C260006820C /* SignInWithEmailContracts.swift */; };
+		084869C3295A1C350006820C /* SignInWithEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084869C2295A1C350006820C /* SignInWithEmailViewModel.swift */; };
+		084869C5295A1C460006820C /* SignInWithEmailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084869C4295A1C460006820C /* SignInWithEmailBuilder.swift */; };
+		084869C8295A2AF60006820C /* Color+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084869C7295A2AF60006820C /* Color+ext.swift */; };
+		084869CA295A48E50006820C /* RegisterBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084869C9295A48E50006820C /* RegisterBuilder.swift */; };
+		084869CC295A498E0006820C /* RegisterContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084869CB295A498E0006820C /* RegisterContracts.swift */; };
+		084869CE295A49D00006820C /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084869CD295A49D00006820C /* RegisterViewModel.swift */; };
+		084869D1295A500D0006820C /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084869D0295A500D0006820C /* HomePageViewController.swift */; };
+		084869D3295A505B0006820C /* HomePageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084869D2295A505B0006820C /* HomePageBuilder.swift */; };
+		084869D5295A50FF0006820C /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084869D4295A50FF0006820C /* HomePageViewModel.swift */; };
+		084869D7295A510F0006820C /* HomePageContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084869D6295A510F0006820C /* HomePageContracts.swift */; };
 		08B40A492950E7CB00CDD9CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B40A482950E7CB00CDD9CB /* AppDelegate.swift */; };
 		08B40A4B2950E7CB00CDD9CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B40A4A2950E7CB00CDD9CB /* SceneDelegate.swift */; };
 		08B40A4D2950E7CB00CDD9CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B40A4C2950E7CB00CDD9CB /* ViewController.swift */; };
@@ -23,12 +34,24 @@
 		08C751A0295654CD001D82F5 /* SignInOptionsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C7519F295654CD001D82F5 /* SignInOptionsBuilder.swift */; };
 		08C751A329567125001D82F5 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C751A229567125001D82F5 /* RegisterViewController.swift */; };
 		08D5AFD529551BB200E9B489 /* SignInWithEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5AFD429551BB200E9B489 /* SignInWithEmailViewController.swift */; };
+		08F0EFD02957A654007D5D95 /* UIResponder+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F0EFCF2957A654007D5D95 /* UIResponder+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		08094E1D295265D3008B93B7 /* SignInOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInOptionsViewController.swift; sourceTree = "<group>"; };
 		08094E1F295269C0008B93B7 /* LoginPageBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageBuilder.swift; sourceTree = "<group>"; };
 		08094E2229526EAB008B93B7 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		084869C0295A1C260006820C /* SignInWithEmailContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithEmailContracts.swift; sourceTree = "<group>"; };
+		084869C2295A1C350006820C /* SignInWithEmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithEmailViewModel.swift; sourceTree = "<group>"; };
+		084869C4295A1C460006820C /* SignInWithEmailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithEmailBuilder.swift; sourceTree = "<group>"; };
+		084869C7295A2AF60006820C /* Color+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+ext.swift"; sourceTree = "<group>"; };
+		084869C9295A48E50006820C /* RegisterBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterBuilder.swift; sourceTree = "<group>"; };
+		084869CB295A498E0006820C /* RegisterContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterContracts.swift; sourceTree = "<group>"; };
+		084869CD295A49D00006820C /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		084869D0295A500D0006820C /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		084869D2295A505B0006820C /* HomePageBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageBuilder.swift; sourceTree = "<group>"; };
+		084869D4295A50FF0006820C /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
+		084869D6295A510F0006820C /* HomePageContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageContracts.swift; sourceTree = "<group>"; };
 		08B40A452950E7CB00CDD9CB /* imokey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = imokey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08B40A482950E7CB00CDD9CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08B40A4A2950E7CB00CDD9CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +67,7 @@
 		08C7519F295654CD001D82F5 /* SignInOptionsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInOptionsBuilder.swift; sourceTree = "<group>"; };
 		08C751A229567125001D82F5 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		08D5AFD429551BB200E9B489 /* SignInWithEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithEmailViewController.swift; sourceTree = "<group>"; };
+		08F0EFCF2957A654007D5D95 /* UIResponder+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +101,25 @@
 			path = Component;
 			sourceTree = "<group>";
 		};
+		084869C6295A2AE40006820C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				084869C7295A2AF60006820C /* Color+ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		084869CF295A4FEC0006820C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				084869D0295A500D0006820C /* HomePageViewController.swift */,
+				084869D2295A505B0006820C /* HomePageBuilder.swift */,
+				084869D4295A50FF0006820C /* HomePageViewModel.swift */,
+				084869D6295A510F0006820C /* HomePageContracts.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		08B40A3C2950E7CB00CDD9CB = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +139,8 @@
 		08B40A472950E7CB00CDD9CB /* imokey */ = {
 			isa = PBXGroup;
 			children = (
+				084869C6295A2AE40006820C /* Extensions */,
+				08F0EFCE2957A641007D5D95 /* Utils */,
 				08094E2129526E8D008B93B7 /* Component */,
 				08B40A5C2950E89900CDD9CB /* View */,
 				08B40A482950E7CB00CDD9CB /* AppDelegate.swift */,
@@ -111,6 +156,7 @@
 		08B40A5C2950E89900CDD9CB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				084869CF295A4FEC0006820C /* Home */,
 				08B40A5D2950E8A800CDD9CB /* Login */,
 			);
 			path = View;
@@ -133,6 +179,9 @@
 			isa = PBXGroup;
 			children = (
 				08D5AFD429551BB200E9B489 /* SignInWithEmailViewController.swift */,
+				084869C0295A1C260006820C /* SignInWithEmailContracts.swift */,
+				084869C2295A1C350006820C /* SignInWithEmailViewModel.swift */,
+				084869C4295A1C460006820C /* SignInWithEmailBuilder.swift */,
 			);
 			path = SignInWithEmail;
 			sourceTree = "<group>";
@@ -141,8 +190,19 @@
 			isa = PBXGroup;
 			children = (
 				08C751A229567125001D82F5 /* RegisterViewController.swift */,
+				084869C9295A48E50006820C /* RegisterBuilder.swift */,
+				084869CB295A498E0006820C /* RegisterContracts.swift */,
+				084869CD295A49D00006820C /* RegisterViewModel.swift */,
 			);
 			path = RegisterOption;
+			sourceTree = "<group>";
+		};
+		08F0EFCE2957A641007D5D95 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				08F0EFCF2957A654007D5D95 /* UIResponder+Utils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,17 +275,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				084869CA295A48E50006820C /* RegisterBuilder.swift in Sources */,
+				084869C8295A2AF60006820C /* Color+ext.swift in Sources */,
 				08C7519E295654B1001D82F5 /* SignInOptionsContracts.swift in Sources */,
 				08B40A4D2950E7CB00CDD9CB /* ViewController.swift in Sources */,
 				08094E1E295265D3008B93B7 /* SignInOptionsViewController.swift in Sources */,
 				08094E2329526EAB008B93B7 /* CustomButton.swift in Sources */,
 				08B40A5F2950E8DD00CDD9CB /* LoginPageViewController.swift in Sources */,
 				08B40A492950E7CB00CDD9CB /* AppDelegate.swift in Sources */,
+				084869C3295A1C350006820C /* SignInWithEmailViewModel.swift in Sources */,
+				084869C1295A1C260006820C /* SignInWithEmailContracts.swift in Sources */,
+				084869D1295A500D0006820C /* HomePageViewController.swift in Sources */,
 				08C751A0295654CD001D82F5 /* SignInOptionsBuilder.swift in Sources */,
 				08B40A4B2950E7CB00CDD9CB /* SceneDelegate.swift in Sources */,
+				084869D7295A510F0006820C /* HomePageContracts.swift in Sources */,
+				084869D3295A505B0006820C /* HomePageBuilder.swift in Sources */,
+				084869D5295A50FF0006820C /* HomePageViewModel.swift in Sources */,
+				084869C5295A1C460006820C /* SignInWithEmailBuilder.swift in Sources */,
 				08C7519B29565488001D82F5 /* SignInOptionsViewModel.swift in Sources */,
+				08F0EFD02957A654007D5D95 /* UIResponder+Utils.swift in Sources */,
+				084869CE295A49D00006820C /* RegisterViewModel.swift in Sources */,
 				08C751A329567125001D82F5 /* RegisterViewController.swift in Sources */,
 				08B40A612951049600CDD9CB /* LoginPageContracts.swift in Sources */,
+				084869CC295A498E0006820C /* RegisterContracts.swift in Sources */,
 				08D5AFD529551BB200E9B489 /* SignInWithEmailViewController.swift in Sources */,
 				08094E20295269C0008B93B7 /* LoginPageBuilder.swift in Sources */,
 				08B40A63295104DB00CDD9CB /* LoginPageViewModel.swift in Sources */,

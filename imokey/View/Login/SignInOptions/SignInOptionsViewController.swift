@@ -28,9 +28,25 @@ class SignInOptionsViewController: UIViewController {
     
     override func loadView() {
         view = UIView()
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor.bgColor
         placeStackView()
         activateConstraints()
+    }
+}
+
+extension SignInOptionsViewController: SignInOptionsViewModelDelegate {
+    func navigateToEmailSignIn() {
+        let vc = SignInWithEmailBuilder.make()
+        if let sheet = vc.presentationController as? UISheetPresentationController {
+            sheet.detents = [.medium()]
+            sheet.prefersGrabberVisible = true
+        }
+        navigationController?.present(vc, animated: true)
+    }
+    
+    func selected(option: SelectionOptions?) {
+        guard let option = option else { return }
+        viewModel.signIn(with: option)
     }
 }
 
@@ -40,16 +56,9 @@ extension SignInOptionsViewController {
             stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 60),
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant:  -10),
-            stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -80)
+           // stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -80)
             
         ])
-    }
-}
-
-extension SignInOptionsViewController: SignInOptionsViewModelDelegate {
-    func selected(option: SelectionOptions?) {
-        guard let option = option else { return }
-        viewModel.signIn(with: option)
     }
 }
 
@@ -80,6 +89,7 @@ extension SignInOptionsViewController {
         mailButton = CustomButton(title: "Sign in with Email", image: UIImage(named: "mail.svg"))
         mailButton.tag = SelectionOptions.email.rawValue
         mailButton.addTarget(self, action: #selector(selectionButtonTapped), for: .touchUpInside)
+        mailButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
         stackView.addArrangedSubview(mailButton)
     }
     
