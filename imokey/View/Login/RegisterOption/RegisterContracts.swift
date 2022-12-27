@@ -14,7 +14,8 @@ protocol RegisterViewModelProtocol {
 }
 
 enum RegisterViewModelOutput: Equatable {
-    case nilEmailOrPassword(String)
+    case showErrorAlert(String)
+    case showLoading(Bool)
 }
 
 protocol RegisterViewModelDelegate: AnyObject {

@@ -10,6 +10,8 @@ import UIKit
 class RegisterViewController: UIViewController {
     
     var stackView: UIStackView!
+    var loadingView: UIActivityIndicatorView!
+    
     
     var titleTextLabel: UILabel!
     var emailTextField: UITextField!
@@ -29,17 +31,26 @@ class RegisterViewController: UIViewController {
     override func loadView() {
         view = UIView()
         view.backgroundColor = .bgColor
+    
         placeStackView()
+        placeLoadingView()
         activateConstraints()
     }
 }
 extension RegisterViewController: RegisterViewModelDelegate {
     func handleViewModelOutput(_ output: RegisterViewModelOutput) {
         switch output {
-        case .nilEmailOrPassword(let string):
+        case .showErrorAlert(let string):
             let ac = UIAlertController(title: nil, message: string, preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "OK", style: .cancel))
             self.present(ac, animated: true)
+        case .showLoading(let show):
+            loadingView.isHidden = !show
+            if show {
+                loadingView.startAnimating()
+            }else {
+                loadingView.stopAnimating()
+            }
         }
     }
     
@@ -58,12 +69,23 @@ extension RegisterViewController {
             stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 60),
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -10),
+            loadingView.topAnchor.constraint(equalTo: view.topAnchor),
+            loadingView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            loadingView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            loadingView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            
         ])
     }
 }
 
 extension RegisterViewController {
-    
+    func placeLoadingView() {
+        loadingView = UIActivityIndicatorView()
+        loadingView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(loadingView)
+        loadingView.isHidden = true
+        loadingView.backgroundColor = UIColor.textColor
+    }
     func placeStackView() {
         stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -132,5 +154,6 @@ extension RegisterViewController {
 extension RegisterViewController {
     @objc func registerButtonTapped(sender: UIButton) {
         viewModel.register(with: emailTextField.text, and: passwordTextField.text)
+        view.endEditing(true)
     }
 }

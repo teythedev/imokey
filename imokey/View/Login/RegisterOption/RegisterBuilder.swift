@@ -10,7 +10,7 @@ import Foundation
 final class RegisterBuilder {
     static func make() -> RegisterViewController {
         let viewController = RegisterViewController()
-        viewController.viewModel = RegisterViewModel()
+        viewController.viewModel = RegisterViewModel(registerService: FirebaseRegister())
         return viewController
     }
 }
