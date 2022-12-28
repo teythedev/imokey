@@ -30,6 +30,10 @@
 		08709F0C295B7E6400AD8C78 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08709F0B295B7E6400AD8C78 /* Provider.swift */; };
 		08709F0F295B7EF500AD8C78 /* FirebaseRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08709F0E295B7EF500AD8C78 /* FirebaseRegister.swift */; };
 		08709F12295B86EB00AD8C78 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08709F11295B86EB00AD8C78 /* User.swift */; };
+		087E996F295CC7E000C7437E /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087E996E295CC7E000C7437E /* LoadingViewController.swift */; };
+		087E9971295CC86200C7437E /* LoadingBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087E9970295CC86200C7437E /* LoadingBuilder.swift */; };
+		087E9973295CEF9700C7437E /* RegisterError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087E9972295CEF9700C7437E /* RegisterError.swift */; };
+		087E9975295CEFBC00C7437E /* RegisterError+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087E9974295CEFBC00C7437E /* RegisterError+ext.swift */; };
 		08B40A492950E7CB00CDD9CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B40A482950E7CB00CDD9CB /* AppDelegate.swift */; };
 		08B40A4B2950E7CB00CDD9CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B40A4A2950E7CB00CDD9CB /* SceneDelegate.swift */; };
 		08B40A4D2950E7CB00CDD9CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B40A4C2950E7CB00CDD9CB /* ViewController.swift */; };
@@ -43,7 +47,7 @@
 		08C751A0295654CD001D82F5 /* SignInOptionsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C7519F295654CD001D82F5 /* SignInOptionsBuilder.swift */; };
 		08C751A329567125001D82F5 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C751A229567125001D82F5 /* RegisterViewController.swift */; };
 		08D5AFD529551BB200E9B489 /* SignInWithEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5AFD429551BB200E9B489 /* SignInWithEmailViewController.swift */; };
-		08F0EFD02957A654007D5D95 /* UIResponder+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F0EFCF2957A654007D5D95 /* UIResponder+Utils.swift */; };
+		08F0EFD02957A654007D5D95 /* UIResponder+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F0EFCF2957A654007D5D95 /* UIResponder+ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +70,10 @@
 		08709F0B295B7E6400AD8C78 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		08709F0E295B7EF500AD8C78 /* FirebaseRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseRegister.swift; sourceTree = "<group>"; };
 		08709F11295B86EB00AD8C78 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		087E996E295CC7E000C7437E /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		087E9970295CC86200C7437E /* LoadingBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingBuilder.swift; sourceTree = "<group>"; };
+		087E9972295CEF9700C7437E /* RegisterError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterError.swift; sourceTree = "<group>"; };
+		087E9974295CEFBC00C7437E /* RegisterError+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegisterError+ext.swift"; sourceTree = "<group>"; };
 		08B40A452950E7CB00CDD9CB /* imokey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = imokey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08B40A482950E7CB00CDD9CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08B40A4A2950E7CB00CDD9CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,7 +89,7 @@
 		08C7519F295654CD001D82F5 /* SignInOptionsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInOptionsBuilder.swift; sourceTree = "<group>"; };
 		08C751A229567125001D82F5 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		08D5AFD429551BB200E9B489 /* SignInWithEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithEmailViewController.swift; sourceTree = "<group>"; };
-		08F0EFCF2957A654007D5D95 /* UIResponder+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Utils.swift"; sourceTree = "<group>"; };
+		08F0EFCF2957A654007D5D95 /* UIResponder+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +130,9 @@
 		084869C6295A2AE40006820C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				08F0EFCF2957A654007D5D95 /* UIResponder+ext.swift */,
 				084869C7295A2AF60006820C /* Color+ext.swift */,
+				087E9974295CEFBC00C7437E /* RegisterError+ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -150,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				08709F0B295B7E6400AD8C78 /* Provider.swift */,
+				087E9972295CEF9700C7437E /* RegisterError.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -169,6 +180,15 @@
 				08709F11295B86EB00AD8C78 /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		087E996D295CC7CF00C7437E /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				087E996E295CC7E000C7437E /* LoadingViewController.swift */,
+				087E9970295CC86200C7437E /* LoadingBuilder.swift */,
+			);
+			path = Loading;
 			sourceTree = "<group>";
 		};
 		08B40A3C2950E7CB00CDD9CB = {
@@ -194,7 +214,6 @@
 				08709F0A295B7E5600AD8C78 /* Enum */,
 				084869D8295A626C0006820C /* Service */,
 				084869C6295A2AE40006820C /* Extensions */,
-				08F0EFCE2957A641007D5D95 /* Utils */,
 				08094E2129526E8D008B93B7 /* Component */,
 				08B40A5C2950E89900CDD9CB /* View */,
 				08B40A482950E7CB00CDD9CB /* AppDelegate.swift */,
@@ -211,6 +230,7 @@
 		08B40A5C2950E89900CDD9CB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				087E996D295CC7CF00C7437E /* Loading */,
 				084869CF295A4FEC0006820C /* Home */,
 				08B40A5D2950E8A800CDD9CB /* Login */,
 			);
@@ -250,14 +270,6 @@
 				084869CD295A49D00006820C /* RegisterViewModel.swift */,
 			);
 			path = RegisterOption;
-			sourceTree = "<group>";
-		};
-		08F0EFCE2957A641007D5D95 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				08F0EFCF2957A654007D5D95 /* UIResponder+Utils.swift */,
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,6 +360,7 @@
 				08094E2329526EAB008B93B7 /* CustomButton.swift in Sources */,
 				08B40A5F2950E8DD00CDD9CB /* LoginPageViewController.swift in Sources */,
 				08B40A492950E7CB00CDD9CB /* AppDelegate.swift in Sources */,
+				087E9973295CEF9700C7437E /* RegisterError.swift in Sources */,
 				08709F12295B86EB00AD8C78 /* User.swift in Sources */,
 				08709F0F295B7EF500AD8C78 /* FirebaseRegister.swift in Sources */,
 				084869C3295A1C350006820C /* SignInWithEmailViewModel.swift in Sources */,
@@ -360,11 +373,14 @@
 				084869D5295A50FF0006820C /* HomePageViewModel.swift in Sources */,
 				08709F0C295B7E6400AD8C78 /* Provider.swift in Sources */,
 				084869C5295A1C460006820C /* SignInWithEmailBuilder.swift in Sources */,
+				087E9971295CC86200C7437E /* LoadingBuilder.swift in Sources */,
 				08C7519B29565488001D82F5 /* SignInOptionsViewModel.swift in Sources */,
-				08F0EFD02957A654007D5D95 /* UIResponder+Utils.swift in Sources */,
+				087E9975295CEFBC00C7437E /* RegisterError+ext.swift in Sources */,
+				08F0EFD02957A654007D5D95 /* UIResponder+ext.swift in Sources */,
 				084869CE295A49D00006820C /* RegisterViewModel.swift in Sources */,
 				08C751A329567125001D82F5 /* RegisterViewController.swift in Sources */,
 				08709F09295B725800AD8C78 /* AuthService.swift in Sources */,
+				087E996F295CC7E000C7437E /* LoadingViewController.swift in Sources */,
 				08B40A612951049600CDD9CB /* LoginPageContracts.swift in Sources */,
 				084869CC295A498E0006820C /* RegisterContracts.swift in Sources */,
 				08D5AFD529551BB200E9B489 /* SignInWithEmailViewController.swift in Sources */,
@@ -515,6 +531,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -542,6 +559,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

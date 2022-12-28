@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController {
+final class RegisterViewController: UIViewController {
     
     var stackView: UIStackView!
     var loadingView: UIActivityIndicatorView!
@@ -43,13 +43,12 @@ extension RegisterViewController: RegisterViewModelDelegate {
         case .showErrorAlert(let string):
             let ac = UIAlertController(title: nil, message: string, preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "OK", style: .cancel))
-            self.present(ac, animated: true)
+            present(ac, animated: true)
         case .showLoading(let show):
-            loadingView.isHidden = !show
             if show {
-                loadingView.startAnimating()
-            }else {
-                loadingView.stopAnimating()
+                present(LoadingBuilder.make(), animated: true)
+            } else {
+                dismiss(animated: false)
             }
         }
     }
@@ -81,6 +80,7 @@ extension RegisterViewController {
 extension RegisterViewController {
     func placeLoadingView() {
         loadingView = UIActivityIndicatorView()
+        loadingView.color = UIColor(red: 211 / 255, green: 255 / 255, blue: 91 / 255, alpha: 1)
         loadingView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(loadingView)
         loadingView.isHidden = true

@@ -6,10 +6,27 @@
 //
 
 import UIKit
-
+import FirebaseAuth
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+        
+    func checkUser(windowScene: UIWindowScene) {
+        if Auth.auth().currentUser != nil {
+            window = UIWindow(frame: UIScreen.main.bounds)
+            window?.windowScene = windowScene
+            let navigationControoler = HomePageBuilder.make()
+            window?.rootViewController = navigationControoler
+            window?.makeKeyAndVisible()
+        }else {
+            window = UIWindow(frame: UIScreen.main.bounds)
+            window?.windowScene = windowScene
+            let navigationControoler = UINavigationController(rootViewController: LoginPageBuilder.make())
+            window?.rootViewController = navigationControoler
+            window?.makeKeyAndVisible()
+        }
+    }
+    
     func changeRootViewController(_ vc: UIViewController, animated: Bool = true) {
         guard let window = self.window else {
             return
@@ -31,11 +48,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.windowScene = windowScene
-        let navigationControoler = UINavigationController(rootViewController: LoginPageBuilder.make())
-        window?.rootViewController = navigationControoler
-        window?.makeKeyAndVisible()
+        checkUser(windowScene: windowScene)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

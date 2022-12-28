@@ -23,11 +23,11 @@ final class RegisterViewModel: RegisterViewModelProtocol {
             switch result {
             case .success(let success):
                 print("User successfully registered: \(success.userEmail) and \(success.userID)")
+                self?.delegate?.navigateToAfterRegister()
             case .failure(let failure):
                 print(failure.description)
                 self?.delegate?.handleViewModelOutput(.showErrorAlert(failure.description))
-            }}
-        //delegate?.handleViewModelOutput(.nilEmailOrPassword("Please"))
-       // delegate?.navigateToAfterRegister()
+            }
+        }
     }
 }

@@ -6,9 +6,11 @@
 //
 
 import UIKit
-
+import FirebaseAuth
 class HomePageViewController: UIViewController {
 
+    var signOutButton: UIButton!
+    
     var viewModel: HomePageViewModelProtocol! {
         didSet {
             viewModel.delegate = self
@@ -17,21 +19,29 @@ class HomePageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .orange
-        // Do any additional setup after loading the view.
+    }
+    override func loadView() {
+        view = UIView()
+        view.backgroundColor = UIColor.bgColor
+        
+        signOutButton = UIButton()
+        view.addSubview(signOutButton)
+        signOutButton.translatesAutoresizingMaskIntoConstraints = false
+        signOutButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        signOutButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        
+        signOutButton.setTitle("Sign Out", for: .normal)
+        signOutButton.addTarget(self, action: #selector(signOutTapped), for: .touchUpInside)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func signOutTapped(sender: UIButton) {
+        let fireAuth = Auth.auth()
+        do {
+            try fireAuth.signOut()
+        } catch let signOutError as NSError {
+            print("Error signing out: %@", signOutError)
+        }
     }
-    */
-
 }
 
 extension HomePageViewController: HomePageViewModelDelegate {
