@@ -46,10 +46,17 @@ extension RegisterViewController: RegisterViewModelDelegate {
             present(ac, animated: true)
         case .showLoading(let show):
             if show {
-                present(LoadingBuilder.make(), animated: true)
-            } else {
-                dismiss(animated: false)
+                loadingView.isHidden = false
+                loadingView.startAnimating()
+            }else {
+                loadingView.isHidden = true
+                loadingView.stopAnimating()
             }
+//            if show {
+//                present(LoadingBuilder.make(), animated: true)
+//            } else {
+//                dismiss(animated: false)
+//            }
         }
     }
     
@@ -68,10 +75,10 @@ extension RegisterViewController {
             stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 60),
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -10),
-            loadingView.topAnchor.constraint(equalTo: view.topAnchor),
-            loadingView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            loadingView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            loadingView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            loadingView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            loadingView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            loadingView.heightAnchor.constraint(equalToConstant: 100),
+            loadingView.widthAnchor.constraint(equalToConstant: 100),
             
         ])
     }
@@ -80,9 +87,10 @@ extension RegisterViewController {
 extension RegisterViewController {
     func placeLoadingView() {
         loadingView = UIActivityIndicatorView()
-        loadingView.color = UIColor(red: 211 / 255, green: 255 / 255, blue: 91 / 255, alpha: 1)
+        loadingView.color = UIColor.bgColor
         loadingView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(loadingView)
+        loadingView.layer.cornerRadius = 10
         loadingView.isHidden = true
         loadingView.backgroundColor = UIColor.textColor
     }

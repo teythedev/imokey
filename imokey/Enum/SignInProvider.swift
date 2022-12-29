@@ -7,8 +7,9 @@
 
 import Foundation
 
-enum Provider: String, CaseIterable {
+enum SignInProvider: String, CaseIterable {
     case apple
     case google
     case facebook
+    case email
 }

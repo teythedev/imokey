@@ -8,7 +8,7 @@
 import Foundation
 
 protocol SignInWithEmailProtocol {
-    func signIn<T: Error>(withEmail email: String, password: String,  completion: @escaping(Result<User, T>) -> Void)
+    func signIn(withEmail email: String, password: String,  completion: @escaping(Result<User, SignInError>) -> Void)
 }
 
 protocol RegisterWithEmailProtocol {
@@ -16,7 +16,7 @@ protocol RegisterWithEmailProtocol {
 }
 
 protocol SignInWithProviderProtocol {
-    func signIn(withProvider: Provider)
+    func signIn(withProvider: SignInProvider)
 }
 
 protocol SignOutProtocol {
