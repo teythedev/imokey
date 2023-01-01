@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import FacebookCore
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -40,6 +41,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                               options: [.transitionFlipFromLeft],
                               animations: nil,
                               completion: nil)
+    }
+    
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        guard let url = URLContexts.first?.url else {
+            return
+        }
     }
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {

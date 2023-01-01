@@ -36,6 +36,10 @@
 		087E9971295CC86200C7437E /* LoadingBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087E9970295CC86200C7437E /* LoadingBuilder.swift */; };
 		087E9973295CEF9700C7437E /* RegisterError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087E9972295CEF9700C7437E /* RegisterError.swift */; };
 		087E9975295CEFBC00C7437E /* RegisterError+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087E9974295CEFBC00C7437E /* RegisterError+ext.swift */; };
+		088FE0AD296209E000A700E4 /* SingInError+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088FE0AC296209E000A700E4 /* SingInError+ext.swift */; };
+		088FE0B029621D7200A700E4 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 088FE0AF29621D7200A700E4 /* FacebookCore */; };
+		088FE0B229621D7200A700E4 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 088FE0B129621D7200A700E4 /* FacebookLogin */; };
+		088FE0B529621FCA00A700E4 /* FaceBookSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088FE0B429621FCA00A700E4 /* FaceBookSignIn.swift */; };
 		08B40A492950E7CB00CDD9CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B40A482950E7CB00CDD9CB /* AppDelegate.swift */; };
 		08B40A4B2950E7CB00CDD9CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B40A4A2950E7CB00CDD9CB /* SceneDelegate.swift */; };
 		08B40A522950E7CC00CDD9CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08B40A512950E7CC00CDD9CB /* Assets.xcassets */; };
@@ -48,6 +52,7 @@
 		08C751A0295654CD001D82F5 /* SignInOptionsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C7519F295654CD001D82F5 /* SignInOptionsBuilder.swift */; };
 		08C751A329567125001D82F5 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C751A229567125001D82F5 /* RegisterViewController.swift */; };
 		08D5AFD529551BB200E9B489 /* SignInWithEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5AFD429551BB200E9B489 /* SignInWithEmailViewController.swift */; };
+		08E4641D295E333700F9CDCF /* EmailAndPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E4641C295E333700F9CDCF /* EmailAndPasswordViewController.swift */; };
 		08F0EFD02957A654007D5D95 /* UIResponder+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F0EFCF2957A654007D5D95 /* UIResponder+ext.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +82,9 @@
 		087E9970295CC86200C7437E /* LoadingBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingBuilder.swift; sourceTree = "<group>"; };
 		087E9972295CEF9700C7437E /* RegisterError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterError.swift; sourceTree = "<group>"; };
 		087E9974295CEFBC00C7437E /* RegisterError+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegisterError+ext.swift"; sourceTree = "<group>"; };
+		088FE0AC296209E000A700E4 /* SingInError+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SingInError+ext.swift"; sourceTree = "<group>"; };
+		088FE0B329621E6900A700E4 /* imokey.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = imokey.entitlements; sourceTree = "<group>"; };
+		088FE0B429621FCA00A700E4 /* FaceBookSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceBookSignIn.swift; sourceTree = "<group>"; };
 		08B40A452950E7CB00CDD9CB /* imokey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = imokey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08B40A482950E7CB00CDD9CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08B40A4A2950E7CB00CDD9CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +99,7 @@
 		08C7519F295654CD001D82F5 /* SignInOptionsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInOptionsBuilder.swift; sourceTree = "<group>"; };
 		08C751A229567125001D82F5 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		08D5AFD429551BB200E9B489 /* SignInWithEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithEmailViewController.swift; sourceTree = "<group>"; };
+		08E4641C295E333700F9CDCF /* EmailAndPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAndPasswordViewController.swift; sourceTree = "<group>"; };
 		08F0EFCF2957A654007D5D95 /* UIResponder+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +109,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				08709F01295B679C00AD8C78 /* FirebaseAnalytics in Frameworks */,
+				088FE0B029621D7200A700E4 /* FacebookCore in Frameworks */,
+				088FE0B229621D7200A700E4 /* FacebookLogin in Frameworks */,
 				08709F03295B679C00AD8C78 /* FirebaseAuth in Frameworks */,
 				08709F05295B679C00AD8C78 /* FirebaseFirestore in Frameworks */,
 				08709F07295B679C00AD8C78 /* FirebaseFirestoreSwift in Frameworks */,
@@ -126,6 +137,7 @@
 			children = (
 				087E996D295CC7CF00C7437E /* Loading */,
 				08094E2229526EAB008B93B7 /* CustomButton.swift */,
+				08E4641C295E333700F9CDCF /* EmailAndPasswordViewController.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -136,6 +148,7 @@
 				08F0EFCF2957A654007D5D95 /* UIResponder+ext.swift */,
 				084869C7295A2AF60006820C /* Color+ext.swift */,
 				087E9974295CEFBC00C7437E /* RegisterError+ext.swift */,
+				088FE0AC296209E000A700E4 /* SingInError+ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -175,6 +188,7 @@
 				08709F08295B725800AD8C78 /* AuthService.swift */,
 				08709F0E295B7EF500AD8C78 /* FirebaseRegister.swift */,
 				08265B7C295DE68F00B04C07 /* FirebaseSignIn.swift */,
+				088FE0B429621FCA00A700E4 /* FaceBookSignIn.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -215,6 +229,7 @@
 		08B40A472950E7CB00CDD9CB /* imokey */ = {
 			isa = PBXGroup;
 			children = (
+				088FE0B329621E6900A700E4 /* imokey.entitlements */,
 				08709F10295B86D200AD8C78 /* Models */,
 				08709F0A295B7E5600AD8C78 /* Enum */,
 				084869D8295A626C0006820C /* Service */,
@@ -296,6 +311,8 @@
 				08709F02295B679C00AD8C78 /* FirebaseAuth */,
 				08709F04295B679C00AD8C78 /* FirebaseFirestore */,
 				08709F06295B679C00AD8C78 /* FirebaseFirestoreSwift */,
+				088FE0AF29621D7200A700E4 /* FacebookCore */,
+				088FE0B129621D7200A700E4 /* FacebookLogin */,
 			);
 			productName = imokey;
 			productReference = 08B40A452950E7CB00CDD9CB /* imokey.app */;
@@ -327,6 +344,7 @@
 			mainGroup = 08B40A3C2950E7CB00CDD9CB;
 			packageReferences = (
 				08709EFF295B679C00AD8C78 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				088FE0AE29621D7200A700E4 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 			);
 			productRefGroup = 08B40A462950E7CB00CDD9CB /* Products */;
 			projectDirPath = "";
@@ -355,14 +373,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				088FE0AD296209E000A700E4 /* SingInError+ext.swift in Sources */,
 				084869CA295A48E50006820C /* RegisterBuilder.swift in Sources */,
 				084869C8295A2AF60006820C /* Color+ext.swift in Sources */,
 				08C7519E295654B1001D82F5 /* SignInOptionsContracts.swift in Sources */,
 				08094E1E295265D3008B93B7 /* SignInOptionsViewController.swift in Sources */,
+				088FE0B529621FCA00A700E4 /* FaceBookSignIn.swift in Sources */,
 				08094E2329526EAB008B93B7 /* CustomButton.swift in Sources */,
 				08B40A5F2950E8DD00CDD9CB /* LoginPageViewController.swift in Sources */,
 				08B40A492950E7CB00CDD9CB /* AppDelegate.swift in Sources */,
 				087E9973295CEF9700C7437E /* RegisterError.swift in Sources */,
+				08E4641D295E333700F9CDCF /* EmailAndPasswordViewController.swift in Sources */,
 				08709F12295B86EB00AD8C78 /* User.swift in Sources */,
 				08709F0F295B7EF500AD8C78 /* FirebaseRegister.swift in Sources */,
 				084869C3295A1C350006820C /* SignInWithEmailViewModel.swift in Sources */,
@@ -526,6 +547,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = imokey/imokey.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HRD7AXL786;
@@ -554,6 +576,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = imokey/imokey.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HRD7AXL786;
@@ -609,6 +632,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		088FE0AE29621D7200A700E4 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -631,6 +662,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 08709EFF295B679C00AD8C78 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
+		};
+		088FE0AF29621D7200A700E4 /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 088FE0AE29621D7200A700E4 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+		088FE0B129621D7200A700E4 /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 088FE0AE29621D7200A700E4 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

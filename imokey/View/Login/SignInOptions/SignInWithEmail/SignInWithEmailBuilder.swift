@@ -10,7 +10,7 @@ import Foundation
 final class SignInWithEmailBuilder {
     static func make() -> SignInWithEmailViewController {
         let viewController = SignInWithEmailViewController()
-        viewController.viewModel = SignInWithEmailViewModel()
+        viewController.viewModel = SignInWithEmailViewModel(signInService: FirebaseSignIn())
         return viewController
     }
 }
