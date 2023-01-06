@@ -7,7 +7,7 @@
 
 import UIKit
 import FirebaseAuth
-import FacebookCore
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if Auth.auth().currentUser != nil {
             window = UIWindow(frame: UIScreen.main.bounds)
             window?.windowScene = windowScene
-            let navigationControoler = HomePageBuilder.make()
+            let navigationControoler =  HomeBuilder.make()
             window?.rootViewController = navigationControoler
             window?.makeKeyAndVisible()
         }else {
@@ -43,11 +43,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                               completion: nil)
     }
     
-    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-        guard let url = URLContexts.first?.url else {
-            return
-        }
-    }
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.

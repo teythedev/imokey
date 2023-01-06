@@ -7,11 +7,11 @@
 
 import UIKit
 import FirebaseAuth
-class HomePageViewController: UIViewController {
+final class HomeViewController: UIViewController {
 
     var signOutButton: UIButton!
     
-    var viewModel: HomePageViewModelProtocol! {
+    var viewModel: HomeViewModelProtocol! {
         didSet {
             viewModel.delegate = self
         }
@@ -31,8 +31,14 @@ class HomePageViewController: UIViewController {
         signOutButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         
         signOutButton.setTitle("Sign Out", for: .normal)
+        signOutButton.setTitleColor(UIColor.textColor, for: .normal)
         signOutButton.addTarget(self, action: #selector(signOutTapped), for: .touchUpInside)
+        
+        addRightBarButton()
+        
     }
+    
+    
     
     @objc func signOutTapped(sender: UIButton) {
         let fireAuth = Auth.auth()
@@ -44,6 +50,24 @@ class HomePageViewController: UIViewController {
     }
 }
 
-extension HomePageViewController: HomePageViewModelDelegate {
+extension HomeViewController: HomeViewModelDelegate {
+    func navigateTo(to route: HomeViewRoute) {
+        switch route {
+        case .addNewMemory(let newMemoryViewModel):
+            navigationController?.pushViewController( NewMemoryBuilder.make(with: newMemoryViewModel), animated: true)
+        }
+        
+    }
     
+    
+}
+
+extension HomeViewController {
+    private func addRightBarButton() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "mappin.circle"), style: .done, target: self, action: #selector(rightBarButtonTapped))
+    }
+    
+    @objc func rightBarButtonTapped(_ sender: UIBarButtonItem) {
+        print("memory added")
+    }
 }

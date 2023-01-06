@@ -43,7 +43,7 @@ class EmailAndPasswordViewController: UIViewController {
     }
     
     func goToHomePage() {
-        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(HomePageBuilder.make())
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(HomeBuilder.make())
     }
 }
 

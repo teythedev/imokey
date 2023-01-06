@@ -7,10 +7,10 @@
 
 import UIKit
 
-final class HomePageBuilder {
+final class HomeBuilder {
     static func make() -> UINavigationController {
-        let viewController = HomePageViewController()
-        viewController.viewModel = HomePageViewModel()
+        let viewController = HomeViewController()
+        viewController.viewModel = HomeViewModel()
         let navigationController = UINavigationController(rootViewController: viewController)
         return navigationController
     }
