@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import CoreLocation
 final class HomeViewController: UIViewController {
 
     var signOutButton: UIButton!
@@ -19,6 +20,7 @@ final class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        man.delegate = self
     }
     override func loadView() {
         view = UIView()
@@ -38,15 +40,18 @@ final class HomeViewController: UIViewController {
         
     }
     
-    
+    let man = CoreLocationService()
     
     @objc func signOutTapped(sender: UIButton) {
-        let fireAuth = Auth.auth()
-        do {
-            try fireAuth.signOut()
-        } catch let signOutError as NSError {
-            print("Error signing out: %@", signOutError)
-        }
+        
+       
+        man.requestLocation()
+//        let fireAuth = Auth.auth()
+//        do {
+//            try fireAuth.signOut()
+//        } catch let signOutError as NSError {
+//            print("Error signing out: %@", signOutError)
+//        }
     }
 }
 
@@ -70,4 +75,17 @@ extension HomeViewController {
     @objc func rightBarButtonTapped(_ sender: UIBarButtonItem) {
         print("memory added")
     }
+}
+
+extension HomeViewController: LocationServiceDelegate {
+    func getLocation(result: (Result<CLLocation, Error>)) {
+        switch result {
+        case .success(let success):
+            print(success)
+        case .failure(let failure):
+            print(failure)
+        }
+    }
+    
+    
 }

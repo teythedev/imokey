@@ -126,3 +126,4 @@ extension LoginPageViewController {
         view.addSubview(policyText)
     }
 }
+

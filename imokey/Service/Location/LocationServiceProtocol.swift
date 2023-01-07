@@ -6,7 +6,27 @@
 //
 
 import Foundation
+import CoreLocation
 
-protocol LocationServiceProtocol {
+protocol LocationServiceProtocol: NSObject {
+    
+    var delegate: LocationServiceDelegate? { get set }
+    
     func requestLocation()
+}
+
+protocol LocationServiceDelegate: AnyObject {
+    func getLocation(result: (Result<CLLocation, Error>))
+}
+
+
+class deneme: LocationServiceDelegate {
+    func getLocation(result: (Result<CLLocation, Error>)) {
+        switch result {
+        case .success(let location):
+            print(location)
+        case .failure(let failure):
+            print(failure.localizedDescription)
+        }
+    }
 }
