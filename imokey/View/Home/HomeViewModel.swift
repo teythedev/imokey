@@ -9,7 +9,7 @@ import Foundation
 
 final class HomeViewModel: HomeViewModelProtocol {
     func addNewMemory() {
-        let viewModel = NewMemoryViewModel()
+        let viewModel = NewMemoryViewModel(locationService: CoreLocationService())
         delegate?.navigateTo(to: .addNewMemory(viewModel))
     }
     

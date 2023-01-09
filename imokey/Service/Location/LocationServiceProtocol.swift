@@ -8,6 +8,10 @@
 import Foundation
 import CoreLocation
 
+
+typealias LAT = CLLocationDegrees
+typealias LONG = CLLocationDegrees
+
 protocol LocationServiceProtocol: NSObject {
     
     var delegate: LocationServiceDelegate? { get set }
@@ -16,17 +20,5 @@ protocol LocationServiceProtocol: NSObject {
 }
 
 protocol LocationServiceDelegate: AnyObject {
-    func getLocation(result: (Result<CLLocation, Error>))
-}
-
-
-class deneme: LocationServiceDelegate {
-    func getLocation(result: (Result<CLLocation, Error>)) {
-        switch result {
-        case .success(let location):
-            print(location)
-        case .failure(let failure):
-            print(failure.localizedDescription)
-        }
-    }
+    func getLocation(result: (Result<CLLocationCoordinate2D, Error>))
 }

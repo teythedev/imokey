@@ -15,14 +15,10 @@ final class CoreLocationService: NSObject, LocationServiceProtocol {
     let locationManager = CLLocationManager()
     
     func requestLocation() {
-        let authStatus = locationManager.authorizationStatus
-        if authStatus == .notDetermined {
-          locationManager.requestWhenInUseAuthorization()
-        }
-
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         locationManager.startUpdatingLocation()
     }
+    
     override init() {
         super.init()
         locationManager.delegate = self
@@ -33,6 +29,17 @@ final class CoreLocationService: NSObject, LocationServiceProtocol {
 
 extension CoreLocationService: CLLocationManagerDelegate {
     
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        switch manager.authorizationStatus {
+        case .notDetermined:
+            manager.requestWhenInUseAuthorization()
+        case .denied:
+            manager.requestWhenInUseAuthorization()
+        default:
+            break
+        }
+    }
+    
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         delegate?.getLocation(result: Result.failure(error))
     }
@@ -42,7 +49,7 @@ extension CoreLocationService: CLLocationManagerDelegate {
         guard let newCurrentLocation = locations.last else {
             return
         }
-        delegate?.getLocation(result: Result.success(newCurrentLocation))
+        delegate?.getLocation(result: Result.success((newCurrentLocation.coordinate)))
         
     }
 }

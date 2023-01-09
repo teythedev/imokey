@@ -19,7 +19,7 @@ enum HomeViewModelOutput: Equatable {
 }
 
 enum HomeViewRoute {
-    case addNewMemory(NewMemoryViewModel)
+    case addNewMemory(NewMemoryViewModelProtocol)
 }
 
 protocol HomeViewModelDelegate: AnyObject {

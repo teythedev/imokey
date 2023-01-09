@@ -16,6 +16,7 @@
 		08094E2329526EAB008B93B7 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08094E2229526EAB008B93B7 /* CustomButton.swift */; };
 		08265B7B295DE65A00B04C07 /* SignInError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08265B7A295DE65A00B04C07 /* SignInError.swift */; };
 		08265B7D295DE68F00B04C07 /* FirebaseSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08265B7C295DE68F00B04C07 /* FirebaseSignIn.swift */; };
+		0846442C296CC5D90039A60B /* UITextView+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0846442B296CC5D90039A60B /* UITextView+ext.swift */; };
 		084869C1295A1C260006820C /* SignInWithEmailContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084869C0295A1C260006820C /* SignInWithEmailContracts.swift */; };
 		084869C3295A1C350006820C /* SignInWithEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084869C2295A1C350006820C /* SignInWithEmailViewModel.swift */; };
 		084869C5295A1C460006820C /* SignInWithEmailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084869C4295A1C460006820C /* SignInWithEmailBuilder.swift */; };
@@ -65,6 +66,7 @@
 		08094E2229526EAB008B93B7 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		08265B7A295DE65A00B04C07 /* SignInError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInError.swift; sourceTree = "<group>"; };
 		08265B7C295DE68F00B04C07 /* FirebaseSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseSignIn.swift; sourceTree = "<group>"; };
+		0846442B296CC5D90039A60B /* UITextView+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+ext.swift"; sourceTree = "<group>"; };
 		084869C0295A1C260006820C /* SignInWithEmailContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithEmailContracts.swift; sourceTree = "<group>"; };
 		084869C2295A1C350006820C /* SignInWithEmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithEmailViewModel.swift; sourceTree = "<group>"; };
 		084869C4295A1C460006820C /* SignInWithEmailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithEmailBuilder.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				084869C7295A2AF60006820C /* Color+ext.swift */,
 				087E9974295CEFBC00C7437E /* RegisterError+ext.swift */,
 				088FE0AC296209E000A700E4 /* SingInError+ext.swift */,
+				0846442B296CC5D90039A60B /* UITextView+ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				084869D5295A50FF0006820C /* HomeViewModel.swift in Sources */,
 				08709F0C295B7E6400AD8C78 /* SignInProvider.swift in Sources */,
 				08CFA848296838350099BFE7 /* NewMemoryViewController.swift in Sources */,
+				0846442C296CC5D90039A60B /* UITextView+ext.swift in Sources */,
 				08265B7D295DE68F00B04C07 /* FirebaseSignIn.swift in Sources */,
 				084869C5295A1C460006820C /* SignInWithEmailBuilder.swift in Sources */,
 				087E9971295CC86200C7437E /* LoadingBuilder.swift in Sources */,

@@ -25,7 +25,7 @@ class LoginPageViewController: UIViewController {
     
     override func loadView() {
         view = UIView()
-        view.backgroundColor = UIColor(named: "bgColor")
+        view.backgroundColor = UIColor.bgColor
         
         placeRegisterButton()
         placeSignInButton()
