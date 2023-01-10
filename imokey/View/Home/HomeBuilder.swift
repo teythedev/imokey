@@ -8,10 +8,10 @@
 import UIKit
 
 final class HomeBuilder {
-    static func make() -> UINavigationController {
+    static func make() -> UIViewController {
         let viewController = HomeViewController()
         viewController.viewModel = HomeViewModel()
-        let navigationController = UINavigationController(rootViewController: viewController)
-        return navigationController
+//        let navigationController = UINavigationController(rootViewController: viewController)
+        return viewController
     }
 }

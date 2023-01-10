@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08030138296DEDA3009B839C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08030137296DEDA3009B839C /* Coordinator.swift */; };
+		0803013A296DEDF2009B839C /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08030139296DEDF2009B839C /* MainCoordinator.swift */; };
 		0806F2E42964C97E009D5149 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0806F2E32964C97E009D5149 /* FirebaseAnalytics */; };
 		0806F2E62964C97E009D5149 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0806F2E52964C97E009D5149 /* FirebaseAuth */; };
 		0806F2E82964C97E009D5149 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 0806F2E72964C97E009D5149 /* FirebaseFirestore */; };
@@ -17,6 +19,8 @@
 		08265B7B295DE65A00B04C07 /* SignInError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08265B7A295DE65A00B04C07 /* SignInError.swift */; };
 		08265B7D295DE68F00B04C07 /* FirebaseSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08265B7C295DE68F00B04C07 /* FirebaseSignIn.swift */; };
 		0846442C296CC5D90039A60B /* UITextView+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0846442B296CC5D90039A60B /* UITextView+ext.swift */; };
+		0846442E296CC8710039A60B /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0846442D296CC8710039A60B /* Memory.swift */; };
+		08464431296CCAE40039A60B /* AudioServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08464430296CCAE40039A60B /* AudioServiceProtocol.swift */; };
 		084869C1295A1C260006820C /* SignInWithEmailContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084869C0295A1C260006820C /* SignInWithEmailContracts.swift */; };
 		084869C3295A1C350006820C /* SignInWithEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084869C2295A1C350006820C /* SignInWithEmailViewModel.swift */; };
 		084869C5295A1C460006820C /* SignInWithEmailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084869C4295A1C460006820C /* SignInWithEmailBuilder.swift */; };
@@ -61,12 +65,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08030137296DEDA3009B839C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		08030139296DEDF2009B839C /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		08094E1D295265D3008B93B7 /* SignInOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInOptionsViewController.swift; sourceTree = "<group>"; };
 		08094E1F295269C0008B93B7 /* LoginPageBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageBuilder.swift; sourceTree = "<group>"; };
 		08094E2229526EAB008B93B7 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		08265B7A295DE65A00B04C07 /* SignInError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInError.swift; sourceTree = "<group>"; };
 		08265B7C295DE68F00B04C07 /* FirebaseSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseSignIn.swift; sourceTree = "<group>"; };
 		0846442B296CC5D90039A60B /* UITextView+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+ext.swift"; sourceTree = "<group>"; };
+		0846442D296CC8710039A60B /* Memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
+		08464430296CCAE40039A60B /* AudioServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioServiceProtocol.swift; sourceTree = "<group>"; };
 		084869C0295A1C260006820C /* SignInWithEmailContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithEmailContracts.swift; sourceTree = "<group>"; };
 		084869C2295A1C350006820C /* SignInWithEmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithEmailViewModel.swift; sourceTree = "<group>"; };
 		084869C4295A1C460006820C /* SignInWithEmailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithEmailBuilder.swift; sourceTree = "<group>"; };
@@ -128,6 +136,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08030136296DED93009B839C /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				08030137296DEDA3009B839C /* Coordinator.swift */,
+				08030139296DEDF2009B839C /* MainCoordinator.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		08094E1C295265BE008B93B7 /* SignInOptions */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +165,14 @@
 				08E4641C295E333700F9CDCF /* EmailAndPasswordViewController.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		0846442F296CCACC0039A60B /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				08464430296CCAE40039A60B /* AudioServiceProtocol.swift */,
+			);
+			path = Audio;
 			sourceTree = "<group>";
 		};
 		084869C6295A2AE40006820C /* Extensions */ = {
@@ -176,6 +201,8 @@
 		084869D8295A626C0006820C /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				08030136296DED93009B839C /* Navigation */,
+				0846442F296CCACC0039A60B /* Audio */,
 				08C31AC12968DCFC00A9F2E7 /* Location */,
 				08C31AC02968D68800A9F2E7 /* Database */,
 				08709F0D295B7EE500AD8C78 /* Auth */,
@@ -207,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				08709F11295B86EB00AD8C78 /* User.swift */,
+				0846442D296CC8710039A60B /* Memory.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -408,7 +436,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08464431296CCAE40039A60B /* AudioServiceProtocol.swift in Sources */,
 				088FE0AD296209E000A700E4 /* SingInError+ext.swift in Sources */,
+				08030138296DEDA3009B839C /* Coordinator.swift in Sources */,
 				084869CA295A48E50006820C /* RegisterBuilder.swift in Sources */,
 				084869C8295A2AF60006820C /* Color+ext.swift in Sources */,
 				08C7519E295654B1001D82F5 /* SignInOptionsContracts.swift in Sources */,
@@ -426,10 +456,12 @@
 				084869D1295A500D0006820C /* HomeViewController.swift in Sources */,
 				08C751A0295654CD001D82F5 /* SignInOptionsBuilder.swift in Sources */,
 				08B40A4B2950E7CB00CDD9CB /* SceneDelegate.swift in Sources */,
+				0846442E296CC8710039A60B /* Memory.swift in Sources */,
 				08C31AC52968DEAB00A9F2E7 /* CoreLocationService.swift in Sources */,
 				084869D7295A510F0006820C /* HomeContracts.swift in Sources */,
 				084869D3295A505B0006820C /* HomeBuilder.swift in Sources */,
 				08CFA846296837160099BFE7 /* NewMemoryViewModel.swift in Sources */,
+				0803013A296DEDF2009B839C /* MainCoordinator.swift in Sources */,
 				084869D5295A50FF0006820C /* HomeViewModel.swift in Sources */,
 				08709F0C295B7E6400AD8C78 /* SignInProvider.swift in Sources */,
 				08CFA848296838350099BFE7 /* NewMemoryViewController.swift in Sources */,

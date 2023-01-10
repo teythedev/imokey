@@ -32,9 +32,11 @@ class NewMemoryViewController: UIViewController {
         view = UIView()
         view.backgroundColor = UIColor.bgColor
         
+        placeToolBar()
         placeMapView()
         placeTextView()
         placeAddButton()
+        
         activateConstraints()
         setupKeyBoardShowAndHide()
     }
@@ -54,6 +56,7 @@ extension NewMemoryViewController: NewMemoryViewModelDelegate {
             annotation.title = "leave your memory here!"
             annotation.coordinate = cLLocationCoordinate2D
             mapView.showAnnotations([annotation], animated: true)
+            mapView.isUserInteractionEnabled = false
         case .showLoading(let bool):
             //todo
             break
@@ -67,16 +70,30 @@ extension NewMemoryViewController: NewMemoryViewModelDelegate {
 }
 
 extension NewMemoryViewController {
+    
     func setupKeyBoardShowAndHide() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-           NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     @objc func keyboardWillShow(sender: NSNotification) {
         view.frame.origin.y = view.frame.origin.y - 200
     }
-
+    
     @objc func keyboardWillHide(notification: NSNotification) {
         view.frame.origin.y = 0
+    }
+    
+    func placeToolBar(){
+        let recordAudioButton = UIBarButtonItem(image: UIImage(systemName:"mic.circle"), style: .done, target: self, action: #selector(recordAudioTapped))
+        let captureImageButton = UIBarButtonItem(image: UIImage(systemName:"camera.circle"), style: .done, target: self, action: #selector(captureImageTapped))
+        navigationItem.rightBarButtonItems = [recordAudioButton, captureImageButton]
+    }
+    
+    @objc func recordAudioTapped() {
+        
+    }
+    @objc func captureImageTapped() {
+        
     }
     
     func placeMapView() {
@@ -87,9 +104,6 @@ extension NewMemoryViewController {
         mapView.translatesAutoresizingMaskIntoConstraints = false
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(mapTapped))
         mapView.addGestureRecognizer(tapGesture)
-        mapView.isScrollEnabled = false
-        mapView.isRotateEnabled = false
-        mapView.isZoomEnabled = false
         view.addSubview(mapView)
     }
     
@@ -109,9 +123,9 @@ extension NewMemoryViewController {
     }
     
     @objc func tapDone(sender: Any) {
-           self.view.endEditing(true)
-       }
-
+        self.view.endEditing(true)
+    }
+    
     
     func placeAddButton() {
         addButton = UIButton()

@@ -11,21 +11,21 @@ import FirebaseAuth
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    var coordinator: MainCoordinator?
         
     func checkUser(windowScene: UIWindowScene) {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.windowScene = windowScene
+        var navigationController: UINavigationController
         if Auth.auth().currentUser != nil {
-            window = UIWindow(frame: UIScreen.main.bounds)
-            window?.windowScene = windowScene
-            let navigationControoler =  HomeBuilder.make()
-            window?.rootViewController = navigationControoler
-            window?.makeKeyAndVisible()
+            navigationController = UINavigationController()
+            coordinator = MainCoordinator(navigationController: navigationController)
+            coordinator?.start()
         }else {
-            window = UIWindow(frame: UIScreen.main.bounds)
-            window?.windowScene = windowScene
-            let navigationControoler = UINavigationController(rootViewController: LoginPageBuilder.make())
-            window?.rootViewController = navigationControoler
-            window?.makeKeyAndVisible()
+            navigationController = UINavigationController(rootViewController: LoginPageBuilder.make())
         }
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
     }
     
     func changeRootViewController(_ vc: UIViewController, animated: Bool = true) {
