@@ -8,7 +8,9 @@
 import Foundation
 
 final class NewMemoryBuilder {
-    static func make(with viewModel: NewMemoryViewModelProtocol) -> NewMemoryViewController {
+    static func make() -> NewMemoryViewController {
+        let locationService = CoreLocationService()
+        let viewModel = NewMemoryViewModel(locationService: locationService)
         let viewController = NewMemoryViewController()
         viewController.viewModel = viewModel
         return viewController

@@ -32,6 +32,8 @@
 		084869D3295A505B0006820C /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084869D2295A505B0006820C /* HomeBuilder.swift */; };
 		084869D5295A50FF0006820C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084869D4295A50FF0006820C /* HomeViewModel.swift */; };
 		084869D7295A510F0006820C /* HomeContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084869D6295A510F0006820C /* HomeContracts.swift */; };
+		085EF468296FB907009D022A /* NewMemoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085EF467296FB907009D022A /* NewMemoryCoordinator.swift */; };
+		085EF46A296FC697009D022A /* NewMemoryCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085EF469296FC697009D022A /* NewMemoryCoordinatorProtocol.swift */; };
 		08709EFE295B670E00AD8C78 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 08709EFD295B670E00AD8C78 /* GoogleService-Info.plist */; };
 		08709F09295B725800AD8C78 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08709F08295B725800AD8C78 /* AuthService.swift */; };
 		08709F0C295B7E6400AD8C78 /* SignInProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08709F0B295B7E6400AD8C78 /* SignInProvider.swift */; };
@@ -42,6 +44,7 @@
 		087E9973295CEF9700C7437E /* RegisterError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087E9972295CEF9700C7437E /* RegisterError.swift */; };
 		087E9975295CEFBC00C7437E /* RegisterError+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087E9974295CEFBC00C7437E /* RegisterError+ext.swift */; };
 		088FE0AD296209E000A700E4 /* SingInError+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088FE0AC296209E000A700E4 /* SingInError+ext.swift */; };
+		0899A8AF29705B3000814711 /* AudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0899A8AE29705B3000814711 /* AudioService.swift */; };
 		08B40A492950E7CB00CDD9CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B40A482950E7CB00CDD9CB /* AppDelegate.swift */; };
 		08B40A4B2950E7CB00CDD9CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B40A4A2950E7CB00CDD9CB /* SceneDelegate.swift */; };
 		08B40A522950E7CC00CDD9CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08B40A512950E7CC00CDD9CB /* Assets.xcassets */; };
@@ -86,6 +89,8 @@
 		084869D2295A505B0006820C /* HomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
 		084869D4295A50FF0006820C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		084869D6295A510F0006820C /* HomeContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContracts.swift; sourceTree = "<group>"; };
+		085EF467296FB907009D022A /* NewMemoryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMemoryCoordinator.swift; sourceTree = "<group>"; };
+		085EF469296FC697009D022A /* NewMemoryCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMemoryCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		08709EFD295B670E00AD8C78 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		08709F08295B725800AD8C78 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		08709F0B295B7E6400AD8C78 /* SignInProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInProvider.swift; sourceTree = "<group>"; };
@@ -97,6 +102,7 @@
 		087E9974295CEFBC00C7437E /* RegisterError+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegisterError+ext.swift"; sourceTree = "<group>"; };
 		088FE0AC296209E000A700E4 /* SingInError+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SingInError+ext.swift"; sourceTree = "<group>"; };
 		088FE0B329621E6900A700E4 /* imokey.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = imokey.entitlements; sourceTree = "<group>"; };
+		0899A8AE29705B3000814711 /* AudioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioService.swift; sourceTree = "<group>"; };
 		08B40A452950E7CB00CDD9CB /* imokey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = imokey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08B40A482950E7CB00CDD9CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08B40A4A2950E7CB00CDD9CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +147,7 @@
 			children = (
 				08030137296DEDA3009B839C /* Coordinator.swift */,
 				08030139296DEDF2009B839C /* MainCoordinator.swift */,
+				085EF467296FB907009D022A /* NewMemoryCoordinator.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -171,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				08464430296CCAE40039A60B /* AudioServiceProtocol.swift */,
+				0899A8AE29705B3000814711 /* AudioService.swift */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -352,6 +360,7 @@
 				08CFA847296838350099BFE7 /* NewMemoryViewController.swift */,
 				08CFA8492968384A0099BFE7 /* NewMemoryBuilder.swift */,
 				08CFA84B2968385F0099BFE7 /* NewMemoryContracts.swift */,
+				085EF469296FC697009D022A /* NewMemoryCoordinatorProtocol.swift */,
 			);
 			path = NewMemory;
 			sourceTree = "<group>";
@@ -452,6 +461,7 @@
 				08709F0F295B7EF500AD8C78 /* FirebaseRegister.swift in Sources */,
 				084869C3295A1C350006820C /* SignInWithEmailViewModel.swift in Sources */,
 				084869C1295A1C260006820C /* SignInWithEmailContracts.swift in Sources */,
+				085EF46A296FC697009D022A /* NewMemoryCoordinatorProtocol.swift in Sources */,
 				08265B7B295DE65A00B04C07 /* SignInError.swift in Sources */,
 				084869D1295A500D0006820C /* HomeViewController.swift in Sources */,
 				08C751A0295654CD001D82F5 /* SignInOptionsBuilder.swift in Sources */,
@@ -467,6 +477,7 @@
 				08CFA848296838350099BFE7 /* NewMemoryViewController.swift in Sources */,
 				0846442C296CC5D90039A60B /* UITextView+ext.swift in Sources */,
 				08265B7D295DE68F00B04C07 /* FirebaseSignIn.swift in Sources */,
+				0899A8AF29705B3000814711 /* AudioService.swift in Sources */,
 				084869C5295A1C460006820C /* SignInWithEmailBuilder.swift in Sources */,
 				087E9971295CC86200C7437E /* LoadingBuilder.swift in Sources */,
 				08CFA84A2968384A0099BFE7 /* NewMemoryBuilder.swift in Sources */,
@@ -484,6 +495,7 @@
 				08D5AFD529551BB200E9B489 /* SignInWithEmailViewController.swift in Sources */,
 				08094E20295269C0008B93B7 /* LoginPageBuilder.swift in Sources */,
 				08B40A63295104DB00CDD9CB /* LoginPageViewModel.swift in Sources */,
+				085EF468296FB907009D022A /* NewMemoryCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,6 +639,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = imokey/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs to know location to add memory";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We neeed";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -657,6 +670,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = imokey/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs to know location to add memory";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We neeed";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

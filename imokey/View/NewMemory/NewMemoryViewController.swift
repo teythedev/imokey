@@ -22,6 +22,8 @@ class NewMemoryViewController: UIViewController {
         }
     }
     
+    weak var coordinator: NewMemoryCoordinator?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,7 +43,7 @@ class NewMemoryViewController: UIViewController {
         setupKeyBoardShowAndHide()
     }
     
-    
+    let audioService = AudioService()
 }
 
 extension NewMemoryViewController: NewMemoryViewModelDelegate {
@@ -85,15 +87,25 @@ extension NewMemoryViewController {
     
     func placeToolBar(){
         let recordAudioButton = UIBarButtonItem(image: UIImage(systemName:"mic.circle"), style: .done, target: self, action: #selector(recordAudioTapped))
-        let captureImageButton = UIBarButtonItem(image: UIImage(systemName:"camera.circle"), style: .done, target: self, action: #selector(captureImageTapped))
-        navigationItem.rightBarButtonItems = [recordAudioButton, captureImageButton]
+        let pauseImageButton = UIBarButtonItem(image: UIImage(systemName:"stop.circle"), style: .done, target: self, action: #selector(stop))
+        let captureImageButton = UIBarButtonItem(image: UIImage(systemName:"play.circle"), style: .done, target: self, action: #selector(captureImageTapped))
+        let pausePlay = UIBarButtonItem(image: UIImage(systemName:"stop.circle"), style: .done, target: self, action: #selector(stopPlay))
+        navigationItem.rightBarButtonItems = [recordAudioButton, pauseImageButton,captureImageButton,pausePlay]
     }
     
+
+    
     @objc func recordAudioTapped() {
-        
+        audioService.startRecording()
     }
     @objc func captureImageTapped() {
-        
+        audioService.playAudio()
+    }
+    @objc func stop(){
+        audioService.stopRecording()
+    }
+    @objc func stopPlay(){
+        audioService.stopAudio()
     }
     
     func placeMapView() {

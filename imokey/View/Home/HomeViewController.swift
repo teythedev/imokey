@@ -9,6 +9,8 @@ import UIKit
 import FirebaseAuth
 
 final class HomeViewController: UIViewController {
+    
+    weak var coordinator: AddingNewMemoryCoordinator?
 
     var signOutButton: UIButton!
     
@@ -53,8 +55,8 @@ final class HomeViewController: UIViewController {
 extension HomeViewController: HomeViewModelDelegate {
     func navigateTo(to route: HomeViewRoute) {
         switch route {
-        case .addNewMemory(let newMemoryViewModel):
-            navigationController?.pushViewController( NewMemoryBuilder.make(with: newMemoryViewModel), animated: true)
+        case .addNewMemory:
+            coordinator?.addNewMemory()
         }
         
     }
