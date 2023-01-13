@@ -13,6 +13,46 @@ class AudioService: NSObject, AudioServiceProtocol {
     var audioRecorder: AVAudioRecorder?
     var audioPlayer: AVAudioPlayer?
     
+    var session: AVAudioSession?
+    
+    override init() {
+        super.init()
+        setupRecording()
+    }
+    
+    func setupRecorder (){
+        do {
+            session = AVAudioSession.sharedInstance()
+            guard let session = session else {
+                return
+            }
+            try session.setMode(.default)
+            try session.setActive(true, options: .notifyOthersOnDeactivation)
+            try session.setCategory(.playAndRecord)
+            
+            let recordSettings : [String: Any] = [
+                AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
+                AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue,
+               // AVEncoderBitRateKey: 320000,
+                AVNumberOfChannelsKey: 1,
+                AVSampleRateKey: 12000
+            ]
+            
+            audioRecorder = try AVAudioRecorder(url: getDocumentsDirectory().appendingPathComponent(filename), settings: recordSettings)
+            audioRecorder?.delegate = self
+            audioRecorder?.prepareToRecord()
+        } catch {
+            
+        }
+    }
+    
+    func askForPermission(completion: @escaping (Bool) -> Void) {
+        
+        
+        recordingSession.requestRecordPermission { granted in
+            completion(granted)
+        }
+    }
 
     func getPermission(completion: @escaping (Result<Bool,Error>) -> Void) {
         do {

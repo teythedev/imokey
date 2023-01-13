@@ -8,10 +8,11 @@
 import Foundation
 
 protocol AudioServiceProtocol{
-    func getPermission(completion: @escaping (Result<Bool,Error>) -> Void)
+
+    
+    func askForPermission(completion: @escaping (Bool) -> Void)
     
     func startRecording()
-    
     func stopRecording()
     
     func playAudio()
