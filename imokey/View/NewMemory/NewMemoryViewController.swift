@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-class NewMemoryViewController: UIViewController {
+final class NewMemoryViewController: UIViewController {
     
     var textView: UITextView!
     
@@ -87,7 +87,7 @@ extension NewMemoryViewController {
     
     func placeToolBar(){
         let recordAudioButton = UIBarButtonItem(image: UIImage(systemName:"mic.circle"), style: .done, target: self, action: #selector(recordAudioTapped))
-        let pauseImageButton = UIBarButtonItem(image: UIImage(systemName:"stop.circle"), style: .done, target: self, action: #selector(stop))
+        let pauseImageButton = UIBarButtonItem(image: UIImage(systemName:"stop"), style: .done, target: self, action: #selector(stop))
         let captureImageButton = UIBarButtonItem(image: UIImage(systemName:"play.circle"), style: .done, target: self, action: #selector(captureImageTapped))
         let pausePlay = UIBarButtonItem(image: UIImage(systemName:"stop.circle"), style: .done, target: self, action: #selector(stopPlay))
         navigationItem.rightBarButtonItems = [recordAudioButton, pauseImageButton,captureImageButton,pausePlay]
@@ -96,7 +96,7 @@ extension NewMemoryViewController {
 
     
     @objc func recordAudioTapped() {
-        audioService.startRecording()
+        audioService.startRecording(fileName: "dememe.m4a")
     }
     @objc func captureImageTapped() {
         audioService.playAudio()

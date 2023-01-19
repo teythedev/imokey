@@ -8,13 +8,12 @@
 import Foundation
 import AVFoundation
 
-class AudioService: NSObject, AudioServiceProtocol {
+final class AudioService: NSObject, AudioServiceProtocol {
     
-    //var recordingSession: AVAudioSession = AVAudioSession.sharedInstance()
-    var audioRecorder: AVAudioRecorder?
-    var audioPlayer: AVAudioPlayer?
+    private var audioRecorder: AVAudioRecorder?
+    private var audioPlayer: AVAudioPlayer?
     
-    var session: AVAudioSession?
+    private var session: AVAudioSession?
     
     override init() {
         super.init()
@@ -35,7 +34,6 @@ class AudioService: NSObject, AudioServiceProtocol {
                     let recordSettings : [String: Any] = [
                         AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
                         AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue,
-                        // AVEncoderBitRateKey: 320000,
                         AVNumberOfChannelsKey: 1,
                         AVSampleRateKey: 12000
                     ]
@@ -66,47 +64,7 @@ class AudioService: NSObject, AudioServiceProtocol {
             print("Something happened")
             completion(false)
         }
-        
-        
     }
-    
-    //    func getPermission(completion: @escaping (Result<Bool,Error>) -> Void) {
-    //        do {
-    //            try recordingSession.setCategory(.playAndRecord, mode: .default)
-    //            try recordingSession.setActive(true)
-    //            recordingSession.requestRecordPermission { allowed in
-    //                if allowed {
-    //                    completion(.success(true))
-    //                }else {
-    //                    completion(.success(true))
-    //                }
-    //            }
-    //        } catch {
-    //            completion(.failure(error))
-    //        }
-    //    }
-    
-//    func setupRecording() {
-//        guard let documentsDirectory = getDocumentsDirectory() else { return }
-//        let audioFileName = UUID().uuidString + ".m4a"
-//        let audioFileURL = documentsDirectory.appendingPathComponent(audioFileName)
-//
-//        let settings = [
-//            AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
-//            AVSampleRateKey: 12000,
-//            AVNumberOfChannelsKey: 1,
-//            AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
-//        ]
-//
-//        do {
-//            audioRecorder = try AVAudioRecorder(url: audioFileURL, settings: settings)
-//            audioRecorder?.isMeteringEnabled = true
-//            audioRecorder?.delegate = self
-//            audioRecorder?.prepareToRecord()
-//        }catch {
-//            //TO DO
-//        }
-//    }
     
     func startRecording(fileName: String) {
         setupRecorder(fileName: fileName)
@@ -130,11 +88,11 @@ class AudioService: NSObject, AudioServiceProtocol {
         if let recorder = audioRecorder {
             if recorder.isRecording {
                 audioRecorder?.stop()
-                do {
-                    try recordingSession.setActive(false)
-                }catch{
-                    
-                }
+//                do {
+//                    try session?.setActive(false)
+//                }catch{
+//
+//                }
             }
         }
     }
@@ -166,13 +124,11 @@ class AudioService: NSObject, AudioServiceProtocol {
 }
 
 extension AudioService: AVAudioRecorderDelegate {
-    //    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
-    //        <#code#>
-    //    }
+
 }
 
 extension AudioService: AVAudioPlayerDelegate {
-    //    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-    //        <#code#>
-    //    }
+        func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+            player.stop()
+        }
 }
