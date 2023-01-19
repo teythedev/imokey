@@ -18,8 +18,8 @@ extension SignInError: CustomStringConvertible {
             return "The email address is badly formatted."
         case .wrongPassword:
             return "The password is wrong"
-        case .unexpected(code: let _):
-            return "An unexpected error occurred."
+        case .unexpected(code: let x):
+            return "An unexpected error occurred.\(x)"
         }
     }
 }
