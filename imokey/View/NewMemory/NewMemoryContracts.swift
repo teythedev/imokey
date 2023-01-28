@@ -13,12 +13,21 @@ protocol NewMemoryViewModelProtocol {
     
     func requestLocation()
     
+    func record()
+    func stopRecord()
+    func playAudio()
+    func stopAudio()
+    
     func saveMemory()
 }
 
 enum NewMemoryViewModelOutput: Equatable {
     
     case markTheMap(CLLocationCoordinate2D)
+    case changeRecordButton(RecordOrStop)
+    case enablePlayButton(Bool)
+    case changePlayButton(PlayOrStop)
+    case enableRecordButton(Bool)
     case showLoading(Bool)
     case showErrorAlert(String)
 }

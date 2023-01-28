@@ -9,8 +9,9 @@ import Foundation
 import AVFoundation
 
 final class AudioService: NSObject, AudioServiceProtocol {
+ 
     
-    
+    var delegate: AudioServiceDelegate?
     
     private var audioRecorder: AVAudioRecorder?
     private var audioPlayer: AVAudioPlayer?
@@ -40,7 +41,7 @@ final class AudioService: NSObject, AudioServiceProtocol {
                         AVSampleRateKey: 12000
                     ]
                     
-                    self.audioRecorder = try AVAudioRecorder(url: self.getDocumentsDirectory().appendingPathComponent(fileName), settings: recordSettings)
+                    self.audioRecorder = try AVAudioRecorder(url: self.getDocumentsDirectory().appendingPathComponent(fileName+".m4a"), settings: recordSettings)
                     if let audioRecorder = self.audioRecorder {
                         audioRecorder.delegate = self
                         audioRecorder.prepareToRecord()
@@ -81,7 +82,7 @@ final class AudioService: NSObject, AudioServiceProtocol {
             if !recorder.isRecording {
                 recorder.record()
             }else {
-                recorder.pause()
+                recorder.stop()
             }
         }
     }
@@ -90,11 +91,6 @@ final class AudioService: NSObject, AudioServiceProtocol {
         if let recorder = audioRecorder {
             if recorder.isRecording {
                 audioRecorder?.stop()
-//                do {
-//                    try session?.setActive(false)
-//                }catch{
-//
-//                }
             }
         }
     }
@@ -107,10 +103,18 @@ final class AudioService: NSObject, AudioServiceProtocol {
         }
     }
     
-    func playAudio() {
+    func playAudio(fileName: String) {
+        
+        do {
+            try session?.overrideOutputAudioPort(AVAudioSession.PortOverride.speaker)
+        } catch let error as NSError {
+            print("audioSession error: \(error.localizedDescription)")
+        }
+        
         if let recorder = audioRecorder {
             if !recorder.isRecording {
-                audioPlayer = try? AVAudioPlayer(contentsOf: recorder.url)
+                let url = self.getDocumentsDirectory().appendingPathComponent(fileName+".m4a")
+                audioPlayer = try? AVAudioPlayer(contentsOf: url)
                 audioPlayer?.delegate = self
                 audioPlayer?.play()
             }
@@ -132,5 +136,7 @@ extension AudioService: AVAudioRecorderDelegate {
 extension AudioService: AVAudioPlayerDelegate {
         func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
             player.stop()
+            guard let delegate = delegate else { return }
+            delegate.audioStopped()
         }
 }

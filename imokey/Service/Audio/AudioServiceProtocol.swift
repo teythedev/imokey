@@ -7,14 +7,12 @@
 
 import Foundation
 
-protocol AudioServiceProtocol{
-
-    
-
+protocol AudioServiceProtocol: AnyObject{
+    var delegate: AudioServiceDelegate? { get set }
     
     func startRecording(fileName: String)
     func stopRecording()
     
-    func playAudio()
+    func playAudio(fileName: String)
     func stopAudio()
 }

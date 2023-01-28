@@ -10,7 +10,8 @@ import Foundation
 final class NewMemoryBuilder {
     static func make() -> NewMemoryViewController {
         let locationService = CoreLocationService()
-        let viewModel = NewMemoryViewModel(locationService: locationService)
+        let audioService = AudioService()
+        let viewModel = NewMemoryViewModel(locationService: locationService, audioService: audioService)
         let viewController = NewMemoryViewController()
         viewController.viewModel = viewModel
         return viewController

@@ -64,6 +64,10 @@
 		08D5AFD529551BB200E9B489 /* SignInWithEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5AFD429551BB200E9B489 /* SignInWithEmailViewController.swift */; };
 		08E4641D295E333700F9CDCF /* EmailAndPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E4641C295E333700F9CDCF /* EmailAndPasswordViewController.swift */; };
 		08F0EFD02957A654007D5D95 /* UIResponder+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F0EFCF2957A654007D5D95 /* UIResponder+ext.swift */; };
+		AB15880C297C0F5F001B4009 /* AudioServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB15880B297C0F5F001B4009 /* AudioServiceDelegate.swift */; };
+		AB571DE12981BBE60081F8B5 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = AB571DE02981BBE60081F8B5 /* FirebaseStorage */; };
+		ABB6444F298519F90043D515 /* StorageServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6444E298519F90043D515 /* StorageServiceProtocol.swift */; };
+		ABB6445129851DC80043D515 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6445029851DC80043D515 /* StorageService.swift */; };
 		ABEDEA2A2979DBC300A3E4D9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABEDEA292979DBC300A3E4D9 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -124,6 +128,9 @@
 		08D5AFD429551BB200E9B489 /* SignInWithEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithEmailViewController.swift; sourceTree = "<group>"; };
 		08E4641C295E333700F9CDCF /* EmailAndPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAndPasswordViewController.swift; sourceTree = "<group>"; };
 		08F0EFCF2957A654007D5D95 /* UIResponder+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+ext.swift"; sourceTree = "<group>"; };
+		AB15880B297C0F5F001B4009 /* AudioServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioServiceDelegate.swift; sourceTree = "<group>"; };
+		ABB6444E298519F90043D515 /* StorageServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageServiceProtocol.swift; sourceTree = "<group>"; };
+		ABB6445029851DC80043D515 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		ABEDEA292979DBC300A3E4D9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,6 +142,7 @@
 				0806F2EA2964C97E009D5149 /* FirebaseFirestoreSwift in Frameworks */,
 				0806F2E42964C97E009D5149 /* FirebaseAnalytics in Frameworks */,
 				0806F2E82964C97E009D5149 /* FirebaseFirestore in Frameworks */,
+				AB571DE12981BBE60081F8B5 /* FirebaseStorage in Frameworks */,
 				0806F2E62964C97E009D5149 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,6 +187,7 @@
 			children = (
 				08464430296CCAE40039A60B /* AudioServiceProtocol.swift */,
 				0899A8AE29705B3000814711 /* AudioService.swift */,
+				AB15880B297C0F5F001B4009 /* AudioServiceDelegate.swift */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -209,10 +218,10 @@
 		084869D8295A626C0006820C /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				ABB6444D298519E80043D515 /* Storage */,
 				08030136296DED93009B839C /* Navigation */,
 				0846442F296CCACC0039A60B /* Audio */,
 				08C31AC12968DCFC00A9F2E7 /* Location */,
-				08C31AC02968D68800A9F2E7 /* Database */,
 				08709F0D295B7EE500AD8C78 /* Auth */,
 			);
 			path = Service;
@@ -261,6 +270,7 @@
 			children = (
 				08B40A472950E7CB00CDD9CB /* imokey */,
 				08B40A462950E7CB00CDD9CB /* Products */,
+				AB571DDF2981BBE60081F8B5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -315,13 +325,6 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		08C31AC02968D68800A9F2E7 /* Database */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Database;
-			sourceTree = "<group>";
-		};
 		08C31AC12968DCFC00A9F2E7 /* Location */ = {
 			isa = PBXGroup;
 			children = (
@@ -365,6 +368,22 @@
 			path = NewMemory;
 			sourceTree = "<group>";
 		};
+		AB571DDF2981BBE60081F8B5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ABB6444D298519E80043D515 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				ABB6444E298519F90043D515 /* StorageServiceProtocol.swift */,
+				ABB6445029851DC80043D515 /* StorageService.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -386,6 +405,7 @@
 				0806F2E52964C97E009D5149 /* FirebaseAuth */,
 				0806F2E72964C97E009D5149 /* FirebaseFirestore */,
 				0806F2E92964C97E009D5149 /* FirebaseFirestoreSwift */,
+				AB571DE02981BBE60081F8B5 /* FirebaseStorage */,
 			);
 			productName = imokey;
 			productReference = 08B40A452950E7CB00CDD9CB /* imokey.app */;
@@ -452,6 +472,7 @@
 				084869C8295A2AF60006820C /* Color+ext.swift in Sources */,
 				08C7519E295654B1001D82F5 /* SignInOptionsContracts.swift in Sources */,
 				08094E1E295265D3008B93B7 /* SignInOptionsViewController.swift in Sources */,
+				ABB6445129851DC80043D515 /* StorageService.swift in Sources */,
 				08094E2329526EAB008B93B7 /* CustomButton.swift in Sources */,
 				08B40A5F2950E8DD00CDD9CB /* LoginPageViewController.swift in Sources */,
 				08B40A492950E7CB00CDD9CB /* AppDelegate.swift in Sources */,
@@ -477,6 +498,7 @@
 				08CFA848296838350099BFE7 /* NewMemoryViewController.swift in Sources */,
 				0846442C296CC5D90039A60B /* UITextView+ext.swift in Sources */,
 				08265B7D295DE68F00B04C07 /* FirebaseSignIn.swift in Sources */,
+				ABB6444F298519F90043D515 /* StorageServiceProtocol.swift in Sources */,
 				0899A8AF29705B3000814711 /* AudioService.swift in Sources */,
 				084869C5295A1C460006820C /* SignInWithEmailBuilder.swift in Sources */,
 				087E9971295CC86200C7437E /* LoadingBuilder.swift in Sources */,
@@ -484,6 +506,7 @@
 				08C7519B29565488001D82F5 /* SignInOptionsViewModel.swift in Sources */,
 				087E9975295CEFBC00C7437E /* RegisterError+ext.swift in Sources */,
 				08F0EFD02957A654007D5D95 /* UIResponder+ext.swift in Sources */,
+				AB15880C297C0F5F001B4009 /* AudioServiceDelegate.swift in Sources */,
 				084869CE295A49D00006820C /* RegisterViewModel.swift in Sources */,
 				08C751A329567125001D82F5 /* RegisterViewController.swift in Sources */,
 				08CFA84C2968385F0099BFE7 /* NewMemoryContracts.swift in Sources */,
@@ -743,6 +766,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0806F2E22964C97E009D5149 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
+		};
+		AB571DE02981BBE60081F8B5 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0806F2E22964C97E009D5149 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
